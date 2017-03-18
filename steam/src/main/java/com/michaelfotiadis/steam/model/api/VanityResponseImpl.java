@@ -19,7 +19,7 @@ public class VanityResponseImpl implements VanityResponse {
     }
 
     @Override
-    public String getSteamid() {
+    public String getSteamId() {
         return steamId;
     }
 

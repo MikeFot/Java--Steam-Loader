@@ -7,9 +7,11 @@ import com.michaelfotiadis.steam.model.SteamApiModel;
  *
  */
 public interface VanityResponse extends SteamApiModel {
-    String getSteamid();
+
+    String getSteamId();
 
     Integer getSuccess();
 
     String getMessage();
+
 }
