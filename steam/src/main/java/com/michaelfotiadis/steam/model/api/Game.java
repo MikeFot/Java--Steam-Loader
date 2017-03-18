@@ -1,12 +1,12 @@
-package com.michaelfotiadis.steam.model;
+package com.michaelfotiadis.steam.model.api;
 
 
-import com.michaelfotiadis.steam.dota2.model.api.DotaApiModel;
+import com.michaelfotiadis.steam.model.SteamApiModel;
 
 /**
  *
  */
-public interface Game extends DotaApiModel {
+public interface Game extends SteamApiModel {
 
     Long getAppId();
 

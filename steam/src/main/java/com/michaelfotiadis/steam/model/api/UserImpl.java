@@ -1,4 +1,4 @@
-package com.michaelfotiadis.steam.model;
+package com.michaelfotiadis.steam.model.api;
 
 
 /**
