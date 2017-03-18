@@ -29,5 +29,5 @@ dependencies {
     })
     compile "com.android.support:appcompat-v7:$rootProject.appCompatLibVersion"
     testCompile 'junit:junit:4.12'
-    compile project(':lib')
+    compile project(':dota')
 }

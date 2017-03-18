@@ -1,0 +1,12 @@
+apply plugin: 'java'
+
+dependencies {
+    compile "com.squareup.retrofit2:retrofit:${retrofit2Version}"
+    compile "com.squareup.retrofit2:converter-gson:${retrofitGsonVersion}"
+    compile "com.squareup.okhttp3:logging-interceptor:${okhttp3LoggingVersion}"
+    compile "com.squareup.okhttp3:okhttp:${okhttp3Version}"
+    compile "com.google.code.gson:gson:${gsonVersion}"
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
