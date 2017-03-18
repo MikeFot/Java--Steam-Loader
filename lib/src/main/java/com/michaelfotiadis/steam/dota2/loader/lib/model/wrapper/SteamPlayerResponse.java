@@ -15,7 +15,7 @@ public class SteamPlayerResponse {
     }
 
     public List<SteamAccountDetails> getPlayers() {
-        return players;
+        return this.players;
     }
 
 }

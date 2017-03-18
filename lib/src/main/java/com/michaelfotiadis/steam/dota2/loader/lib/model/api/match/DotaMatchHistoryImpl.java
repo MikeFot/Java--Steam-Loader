@@ -7,47 +7,47 @@ import java.util.List;
 public class DotaMatchHistoryImpl implements DotaMatchHistory {
 
     @SerializedName("status")
-    private final Integer mStatus;
+    private final Integer status;
     @SerializedName("num_results")
-    private final Integer mNumResults;
+    private final Integer numResults;
     @SerializedName("total_results")
-    private final Integer mTotalResults;
+    private final Integer totalResults;
     @SerializedName("results_remaining")
-    private final Integer mResultsRemaining;
+    private final Integer resultsRemaining;
     @SerializedName("matches")
-    private final List<DotaMatchOverview> mMatches;
+    private final List<DotaMatchOverview> matches;
 
     public DotaMatchHistoryImpl(final Integer status, final Integer numResults, final Integer totalResults, final Integer resultsRemaining, final List<DotaMatchOverview> matches) {
-        mStatus = status;
-        mNumResults = numResults;
-        mTotalResults = totalResults;
-        mResultsRemaining = resultsRemaining;
-        mMatches = matches;
+        this.status = status;
+        this.numResults = numResults;
+        this.totalResults = totalResults;
+        this.resultsRemaining = resultsRemaining;
+        this.matches = matches;
     }
 
     @Override
     public Integer getStatus() {
-        return mStatus;
+        return status;
     }
 
     @Override
     public Integer getNumResults() {
-        return mNumResults;
+        return numResults;
     }
 
     @Override
     public Integer getTotalResults() {
-        return mTotalResults;
+        return totalResults;
     }
 
     @Override
     public Integer getResultsRemaining() {
-        return mResultsRemaining;
+        return resultsRemaining;
     }
 
     @Override
     public List<DotaMatchOverview> getMatches() {
-        return mMatches;
+        return matches;
     }
 
 }

@@ -9,152 +9,152 @@ import java.util.List;
 public class DotaMatchDetailsImpl implements DotaMatchDetails {
 
     @SerializedName("players")
-    private final List<DotaPlayerDetails> mPlayers;
+    private final List<DotaPlayerDetails> players;
     @SerializedName("radiant_win")
-    private final Boolean mRadiantWin;
+    private final Boolean radiantWin;
     @SerializedName("duration")
-    private final Integer mDuration;
+    private final Integer duration;
     @SerializedName("start_time")
-    private final Long mStartTime;
+    private final Long startTime;
     @SerializedName("match_id")
-    private final Long mMatchId;
+    private final Long matchId;
     @SerializedName("match_seq_num")
-    private final Long mMatchSeqNum;
+    private final Long matchSeqNum;
     @SerializedName("tower_status_radiant")
-    private final Long mTowerStatusRadiant;
+    private final Long towerStatusRadiant;
     @SerializedName("tower_status_dire")
-    private final Long mTowerStatusDire;
+    private final Long towerStatusDire;
     @SerializedName("barracks_status_radiant")
-    private final Long mBarracksStatusRadiant;
+    private final Long barracksStatusRadiant;
     @SerializedName("barracks_status_dire")
-    private final Long mBarracksStatusDire;
+    private final Long barracksStatusDire;
     @SerializedName("cluster")
-    private final Integer mCluster;
+    private final Integer cluster;
     @SerializedName("first_blood_time")
-    private final Integer mFirstBloodTime;
+    private final Integer firstBloodTime;
     @SerializedName("lobby_type")
-    private final Integer mLobbyType;
+    private final Integer lobbyType;
     @SerializedName("human_players")
-    private final Integer mHumanPlayers;
+    private final Integer humanPlayers;
     @SerializedName("leagueid")
-    private final Integer mLeagueid;
+    private final Integer leagueid;
     @SerializedName("positive_votes")
-    private final Integer mPositiveVotes;
+    private final Integer positiveVotes;
     @SerializedName("negative_votes")
-    private final Integer mNegativeVotes;
+    private final Integer negativeVotes;
     @SerializedName("game_mode")
-    private final Integer mGameMode;
+    private final Integer gameMode;
 
 
     public DotaMatchDetailsImpl(final List<DotaPlayerDetails> players, final Boolean radiantWin, final Integer duration, final Long startTime, final Long matchId, final Long matchSeqNum, final Long towerStatusRadiant, final Long towerStatusDire, final Long barracksStatusRadiant, final Long barracksStatusDire, final Integer cluster, final Integer firstBloodTime, final Integer lobbyType, final Integer humanPlayers, final Integer leagueid, final Integer positiveVotes, final Integer negativeVotes, final Integer gameMode) {
-        mPlayers = players;
-        mRadiantWin = radiantWin;
-        mDuration = duration;
-        mStartTime = startTime;
-        mMatchId = matchId;
-        mMatchSeqNum = matchSeqNum;
-        mTowerStatusRadiant = towerStatusRadiant;
-        mTowerStatusDire = towerStatusDire;
-        mBarracksStatusRadiant = barracksStatusRadiant;
-        mBarracksStatusDire = barracksStatusDire;
-        mCluster = cluster;
-        mFirstBloodTime = firstBloodTime;
-        mLobbyType = lobbyType;
-        mHumanPlayers = humanPlayers;
-        mLeagueid = leagueid;
-        mPositiveVotes = positiveVotes;
-        mNegativeVotes = negativeVotes;
-        mGameMode = gameMode;
+        this.players = players;
+        this.radiantWin = radiantWin;
+        this.duration = duration;
+        this.startTime = startTime;
+        this.matchId = matchId;
+        this.matchSeqNum = matchSeqNum;
+        this.towerStatusRadiant = towerStatusRadiant;
+        this.towerStatusDire = towerStatusDire;
+        this.barracksStatusRadiant = barracksStatusRadiant;
+        this.barracksStatusDire = barracksStatusDire;
+        this.cluster = cluster;
+        this.firstBloodTime = firstBloodTime;
+        this.lobbyType = lobbyType;
+        this.humanPlayers = humanPlayers;
+        this.leagueid = leagueid;
+        this.positiveVotes = positiveVotes;
+        this.negativeVotes = negativeVotes;
+        this.gameMode = gameMode;
     }
 
     @Override
     public List<DotaPlayerDetails> getPlayers() {
-        return mPlayers;
+        return players;
     }
 
     @Override
     public Boolean getRadiantWin() {
-        return mRadiantWin;
+        return radiantWin;
     }
 
     @Override
     public Integer getDuration() {
-        return mDuration;
+        return this.duration;
     }
 
     @Override
     public Long getStartTime() {
-        return mStartTime;
+        return startTime;
     }
 
     @Override
     public Long getMatchId() {
-        return mMatchId;
+        return matchId;
     }
 
     @Override
     public Long getMatchSeqNum() {
-        return mMatchSeqNum;
+        return matchSeqNum;
     }
 
     @Override
     public Long getTowerStatusRadiant() {
-        return mTowerStatusRadiant;
+        return towerStatusRadiant;
     }
 
     @Override
     public Long getTowerStatusDire() {
-        return mTowerStatusDire;
+        return towerStatusDire;
     }
 
     @Override
     public Long getBarracksStatusRadiant() {
-        return mBarracksStatusRadiant;
+        return this.barracksStatusRadiant;
     }
 
     @Override
     public Long getBarracksStatusDire() {
-        return mBarracksStatusDire;
+        return this.barracksStatusDire;
     }
 
     @Override
     public Integer getCluster() {
-        return mCluster;
+        return this.cluster;
     }
 
     @Override
     public Integer getFirstBloodTime() {
-        return mFirstBloodTime;
+        return this.firstBloodTime;
     }
 
     @Override
     public Integer getLobbyType() {
-        return mLobbyType;
+        return lobbyType;
     }
 
     @Override
     public Integer getHumanPlayers() {
-        return mHumanPlayers;
+        return humanPlayers;
     }
 
     @Override
     public Integer getLeagueid() {
-        return mLeagueid;
+        return leagueid;
     }
 
     @Override
     public Integer getPositiveVotes() {
-        return mPositiveVotes;
+        return positiveVotes;
     }
 
     @Override
     public Integer getNegativeVotes() {
-        return mNegativeVotes;
+        return negativeVotes;
     }
 
     @Override
     public Integer getGameMode() {
-        return mGameMode;
+        return this.gameMode;
     }
 
 }

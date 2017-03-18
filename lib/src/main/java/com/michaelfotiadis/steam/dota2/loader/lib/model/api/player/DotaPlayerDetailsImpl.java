@@ -10,199 +10,199 @@ import java.util.List;
 public class DotaPlayerDetailsImpl implements DotaPlayerDetails {
 
     @SerializedName("account_id")
-    private final Long mAccountId;
+    private final Long accountId;
     @SerializedName("player_slot")
-    private final Integer mPlayerSlot;
+    private final Integer playerSlot;
     @SerializedName("hero_id")
-    private final Integer mHeroId;
+    private final Integer heroId;
     @SerializedName("item_0")
-    private final Integer mItem0;
+    private final Integer item0;
     @SerializedName("item_1")
-    private final Integer mItem1;
+    private final Integer item1;
     @SerializedName("item_2")
-    private final Integer mItem2;
+    private final Integer item2;
     @SerializedName("item_3")
-    private final Integer mItem3;
+    private final Integer item3;
     @SerializedName("item_4")
-    private final Integer mItem4;
+    private final Integer item4;
     @SerializedName("item_5")
-    private final Integer mItem5;
+    private final Integer item5;
     @SerializedName("kills")
-    private final Integer mKills;
+    private final Integer kills;
     @SerializedName("deaths")
-    private final Integer mDeaths;
+    private final Integer deaths;
     @SerializedName("assists")
-    private final Integer mAssists;
+    private final Integer assists;
     @SerializedName("leaver_status")
-    private final Integer mLeaverStatus;
+    private final Integer leaverStatus;
     @SerializedName("gold")
-    private final Integer mGold;
+    private final Integer gold;
     @SerializedName("last_hits")
-    private final Integer mLastHits;
+    private final Integer lastHits;
     @SerializedName("denies")
-    private final Integer mDenies;
+    private final Integer denies;
     @SerializedName("gold_per_min")
-    private final Integer mGoldPerMin;
+    private final Integer goldPerMin;
     @SerializedName("xp_per_min")
-    private final Integer mXpPerMin;
+    private final Integer xpPerMin;
     @SerializedName("gold_spent")
-    private final Integer mGoldSpent;
+    private final Integer goldSpent;
     @SerializedName("hero_damage")
-    private final Integer mHeroDamage;
+    private final Integer heroDamage;
     @SerializedName("tower_damage")
-    private final Integer mTowerDamage;
+    private final Integer towerDamage;
     @SerializedName("hero_healing")
-    private final Integer mHeroHealing;
+    private final Integer heroHealing;
     @SerializedName("level")
-    private final Integer mLevel;
+    private final Integer level;
     @SerializedName("ability_upgrades")
-    private final List<DotaAbilityUpgrade> mAbilityUpgrades;
+    private final List<DotaAbilityUpgrade> abilityUpgrades;
 
     public DotaPlayerDetailsImpl(final Long accountId, final Integer playerSlot, final Integer heroId, final Integer item0, final Integer item1, final Integer item2, final Integer item3, final Integer item4, final Integer item5, final Integer kills, final Integer deaths, final Integer assists, final Integer leaverStatus, final Integer gold, final Integer lastHits, final Integer denies, final Integer goldPerMin, final Integer xpPerMin, final Integer goldSpent, final Integer heroDamage, final Integer towerDamage, final Integer heroHealing, final Integer level, final List<DotaAbilityUpgrade> abilityUpgrades) {
-        mAccountId = accountId;
-        mPlayerSlot = playerSlot;
-        mHeroId = heroId;
-        mItem0 = item0;
-        mItem1 = item1;
-        mItem2 = item2;
-        mItem3 = item3;
-        mItem4 = item4;
-        mItem5 = item5;
-        mKills = kills;
-        mDeaths = deaths;
-        mAssists = assists;
-        mLeaverStatus = leaverStatus;
-        mGold = gold;
-        mLastHits = lastHits;
-        mDenies = denies;
-        mGoldPerMin = goldPerMin;
-        mXpPerMin = xpPerMin;
-        mGoldSpent = goldSpent;
-        mHeroDamage = heroDamage;
-        mTowerDamage = towerDamage;
-        mHeroHealing = heroHealing;
-        mLevel = level;
-        mAbilityUpgrades = abilityUpgrades;
+        this.accountId = accountId;
+        this.playerSlot = playerSlot;
+        this.heroId = heroId;
+        this.item0 = item0;
+        this.item1 = item1;
+        this.item2 = item2;
+        this.item3 = item3;
+        this.item4 = item4;
+        this.item5 = item5;
+        this.kills = kills;
+        this.deaths = deaths;
+        this.assists = assists;
+        this.leaverStatus = leaverStatus;
+        this.gold = gold;
+        this.lastHits = lastHits;
+        this.denies = denies;
+        this.goldPerMin = goldPerMin;
+        this.xpPerMin = xpPerMin;
+        this.goldSpent = goldSpent;
+        this.heroDamage = heroDamage;
+        this.towerDamage = towerDamage;
+        this.heroHealing = heroHealing;
+        this.level = level;
+        this.abilityUpgrades = abilityUpgrades;
     }
 
     @Override
     public Long getAccountId() {
-        return mAccountId;
+        return this.accountId;
     }
 
     @Override
     public Integer getPlayerSlot() {
-        return mPlayerSlot;
+        return playerSlot;
     }
 
     @Override
     public Integer getHeroId() {
-        return mHeroId;
+        return heroId;
     }
 
     @Override
     public Integer getItem0() {
-        return mItem0;
+        return item0;
     }
 
     @Override
     public Integer getItem1() {
-        return mItem1;
+        return item1;
     }
 
     @Override
     public Integer getItem2() {
-        return mItem2;
+        return item2;
     }
 
     @Override
     public Integer getItem3() {
-        return mItem3;
+        return item3;
     }
 
     @Override
     public Integer getItem4() {
-        return mItem4;
+        return item4;
     }
 
     @Override
     public Integer getItem5() {
-        return mItem5;
+        return item5;
     }
 
     @Override
     public Integer getKills() {
-        return mKills;
+        return kills;
     }
 
     @Override
     public Integer getDeaths() {
-        return mDeaths;
+        return this.deaths;
     }
 
     @Override
     public Integer getAssists() {
-        return mAssists;
+        return this.assists;
     }
 
     @Override
     public Integer getLeaverStatus() {
-        return mLeaverStatus;
+        return leaverStatus;
     }
 
     @Override
     public Integer getGold() {
-        return mGold;
+        return this.gold;
     }
 
     @Override
     public Integer getLastHits() {
-        return mLastHits;
+        return lastHits;
     }
 
     @Override
     public Integer getDenies() {
-        return mDenies;
+        return this.denies;
     }
 
     @Override
     public Integer getGoldPerMin() {
-        return mGoldPerMin;
+        return this.goldPerMin;
     }
 
     @Override
     public Integer getXpPerMin() {
-        return mXpPerMin;
+        return xpPerMin;
     }
 
     @Override
     public Integer getGoldSpent() {
-        return mGoldSpent;
+        return this.goldSpent;
     }
 
     @Override
     public Integer getHeroDamage() {
-        return mHeroDamage;
+        return heroDamage;
     }
 
     @Override
     public Integer getTowerDamage() {
-        return mTowerDamage;
+        return towerDamage;
     }
 
     @Override
     public Integer getHeroHealing() {
-        return mHeroHealing;
+        return heroHealing;
     }
 
     @Override
     public Integer getLevel() {
-        return mLevel;
+        return level;
     }
 
     @Override
     public List<DotaAbilityUpgrade> getAbilityUpgrades() {
-        return mAbilityUpgrades;
+        return this.abilityUpgrades;
     }
 
 }

@@ -4,13 +4,13 @@ import com.google.gson.annotations.SerializedName;
 
 public class SteamAccountResponse {
     @SerializedName("response")
-    private final SteamPlayerResponse mResponse;
+    private final SteamPlayerResponse response;
 
-    public SteamAccountResponse(SteamPlayerResponse response) {
-        this.mResponse = response;
+    public SteamAccountResponse(final SteamPlayerResponse response) {
+        this.response = response;
     }
 
     public SteamPlayerResponse getResult() {
-        return mResponse;
+        return response;
     }
 }

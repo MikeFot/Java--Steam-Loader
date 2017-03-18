@@ -8,32 +8,32 @@ import java.util.List;
 public class DotaHeroContainerImpl implements DotaHeroContainer {
 
     @SerializedName("heroes")
-    private final List<DotaHero> mHeroes;
+    private final List<DotaHero> heroes;
     @SerializedName("status")
-    private final Integer mStatus;
+    private final Integer status;
     @SerializedName("count")
-    private final Integer mCount;
+    private final Integer count;
 
 
     public DotaHeroContainerImpl(final List<DotaHero> heroes, final Integer status, final Integer count) {
-        mHeroes = heroes;
-        mStatus = status;
-        mCount = count;
+        this.heroes = heroes;
+        this.status = status;
+        this.count = count;
     }
 
     @Override
     public List<DotaHero> getHeroes() {
-        return mHeroes;
+        return heroes;
     }
 
     @Override
     public Integer getStatus() {
-        return mStatus;
+        return status;
     }
 
     @Override
     public Integer getCount() {
-        return mCount;
+        return this.count;
     }
 
 }

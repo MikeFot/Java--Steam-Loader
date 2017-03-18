@@ -5,32 +5,32 @@ import com.google.gson.annotations.SerializedName;
 public class DotaAbilityUpgradeImpl implements DotaAbilityUpgrade {
 
     @SerializedName("ability")
-    private final int mAbility;
+    private final Integer ability;
     @SerializedName("time")
-    private final int mTime;
+    private final Integer time;
     @SerializedName("level")
-    private final int mLevel;
+    private final Integer level;
 
 
     public DotaAbilityUpgradeImpl(final int ability, final int time, final int level) {
-        mAbility = ability;
-        mTime = time;
-        mLevel = level;
+        this.ability = ability;
+        this.time = time;
+        this.level = level;
     }
 
     @Override
-    public int getAbility() {
-        return mAbility;
+    public Integer getAbility() {
+        return this.ability;
     }
 
     @Override
-    public int getTime() {
-        return mTime;
+    public Integer getTime() {
+        return time;
     }
 
     @Override
-    public int getLevel() {
-        return mLevel;
+    public Integer getLevel() {
+        return level;
     }
 
 

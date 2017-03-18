@@ -5,31 +5,31 @@ import com.google.gson.annotations.SerializedName;
 public class DotaPlayerOverviewImpl implements DotaPlayerOverview {
 
     @SerializedName("account_id")
-    private final Long mAccountId;
+    private final Long accountId;
     @SerializedName("player_slot")
-    private final Integer mPlayerSlot;
+    private final Integer playerSlot;
     @SerializedName("hero_id")
-    private final Integer mHeroId;
+    private final Integer heroId;
 
     public DotaPlayerOverviewImpl(final Long accountId, final Integer playerSlot, final Integer heroId) {
-        mAccountId = accountId;
-        mPlayerSlot = playerSlot;
-        mHeroId = heroId;
+        this.accountId = accountId;
+        this.playerSlot = playerSlot;
+        this.heroId = heroId;
     }
 
     @Override
     public Long getAccountId() {
-        return mAccountId;
+        return this.accountId;
     }
 
     @Override
     public Integer getPlayerSlot() {
-        return mPlayerSlot;
+        return playerSlot;
     }
 
     @Override
     public Integer getHeroId() {
-        return mHeroId;
+        return heroId;
     }
 
 }

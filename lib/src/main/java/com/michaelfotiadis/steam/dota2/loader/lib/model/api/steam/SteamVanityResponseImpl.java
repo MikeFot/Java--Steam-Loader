@@ -6,31 +6,31 @@ import com.google.gson.annotations.SerializedName;
 public class SteamVanityResponseImpl implements SteamVanityResponse {
 
     @SerializedName("steamid")
-    private final String mSteamId;
+    private final String steamId;
     @SerializedName("success")
-    private final Integer mSuccess;
+    private final Integer success;
     @SerializedName("message")
-    private final String mMessage;
+    private final String message;
 
     public SteamVanityResponseImpl(final String steamId, final Integer success, final String message) {
-        mSteamId = steamId;
-        mSuccess = success;
-        mMessage = message;
+        this.steamId = steamId;
+        this.success = success;
+        this.message = message;
     }
 
     @Override
     public String getSteamid() {
-        return mSteamId;
+        return steamId;
     }
 
     @Override
     public Integer getSuccess() {
-        return mSuccess;
+        return success;
     }
 
     @Override
     public String getMessage() {
-        return mMessage;
+        return message;
     }
 
 }

@@ -5,62 +5,62 @@ import com.google.gson.annotations.SerializedName;
 public class DotaItemImpl implements DotaItem {
 
     @SerializedName("id")
-    private final Integer mId;
+    private final Integer id;
     @SerializedName("name")
-    private final String mName;
+    private final String name;
     @SerializedName("cost")
-    private final Integer mCost;
+    private final Integer cost;
     @SerializedName("secret_shop")
-    private final Integer mSecretShop;
+    private final Integer secretShop;
     @SerializedName("side_shop")
-    private final Integer mSideShop;
+    private final Integer sideShop;
     @SerializedName("recipe")
-    private final Integer mRecipe;
+    private final Integer recipe;
     @SerializedName("localized_name")
-    private final String mLocalizedName;
+    private final String localizedName;
 
     public DotaItemImpl(final Integer id, final String name, final Integer cost, final Integer secretShop, final Integer sideShop, final Integer recipe, final String localizedName) {
-        mId = id;
-        mName = name;
-        mCost = cost;
-        mSecretShop = secretShop;
-        mSideShop = sideShop;
-        mRecipe = recipe;
-        mLocalizedName = localizedName;
+        this.id = id;
+        this.name = name;
+        this.cost = cost;
+        this.secretShop = secretShop;
+        this.sideShop = sideShop;
+        this.recipe = recipe;
+        this.localizedName = localizedName;
     }
 
     @Override
     public Integer getId() {
-        return mId;
+        return id;
     }
 
     @Override
     public String getName() {
-        return mName;
+        return name;
     }
 
     @Override
     public Integer getCost() {
-        return mCost;
+        return this.cost;
     }
 
     @Override
     public Integer getSecretShop() {
-        return mSecretShop;
+        return secretShop;
     }
 
     @Override
     public Integer getSideShop() {
-        return mSideShop;
+        return sideShop;
     }
 
     @Override
     public Integer getRecipe() {
-        return mRecipe;
+        return recipe;
     }
 
     @Override
     public String getLocalizedName() {
-        return mLocalizedName;
+        return localizedName;
     }
 }

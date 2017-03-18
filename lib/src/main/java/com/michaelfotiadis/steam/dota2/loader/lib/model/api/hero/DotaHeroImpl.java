@@ -5,31 +5,31 @@ import com.google.gson.annotations.SerializedName;
 public class DotaHeroImpl implements DotaHero {
 
     @SerializedName("name")
-    private final String mName;
+    private final String name;
     @SerializedName("id")
-    private final int mId;
+    private final Integer id;
     @SerializedName("localized_name")
-    private final String mLocalizedName;
+    private final String localizedName;
 
     public DotaHeroImpl(final String name, final int id, final String localizedName) {
-        mName = name;
-        mId = id;
-        mLocalizedName = localizedName;
+        this.name = name;
+        this.id = id;
+        this.localizedName = localizedName;
     }
 
     @Override
     public String getName() {
-        return mName;
+        return name;
     }
 
     @Override
-    public int getId() {
-        return mId;
+    public Integer getId() {
+        return id;
     }
 
     @Override
     public String getLocalizedName() {
-        return mLocalizedName;
+        return localizedName;
     }
 
 

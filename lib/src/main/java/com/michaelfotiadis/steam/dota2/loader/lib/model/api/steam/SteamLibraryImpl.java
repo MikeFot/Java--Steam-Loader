@@ -7,24 +7,24 @@ import java.util.List;
 public class SteamLibraryImpl implements SteamLibrary {
 
     @SerializedName("game_count")
-    private final Integer mGameCount;
+    private final Integer gameCount;
     @SerializedName("games")
-    private final List<SteamGame> mGames;
+    private final List<SteamGame> games;
 
 
     public SteamLibraryImpl(final Integer gameCount, final List<SteamGame> games) {
-        mGameCount = gameCount;
-        mGames = games;
+        this.gameCount = gameCount;
+        this.games = games;
     }
 
     @Override
     public Integer getGameCount() {
-        return mGameCount;
+        return this.gameCount;
     }
 
     @Override
     public List<SteamGame> getGames() {
-        return mGames;
+        return this.games;
     }
 
 

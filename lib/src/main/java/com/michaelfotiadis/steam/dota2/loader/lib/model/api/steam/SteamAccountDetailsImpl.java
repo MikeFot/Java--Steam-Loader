@@ -6,128 +6,128 @@ import com.google.gson.annotations.SerializedName;
 public class SteamAccountDetailsImpl implements SteamAccountDetails {
 
     @SerializedName("steamid")
-    private final String mSteamId;
+    private final String SteamId;
     @SerializedName("communityvisibilitystate")
-    private final Integer mCommunityVisibilityState;
+    private final Integer communityVisibilityState;
     @SerializedName("profilestate")
-    private final Integer mProfileState;
+    private final Integer profileState;
     @SerializedName("personaname")
-    private final String mPersonaName;
+    private final String personaName;
     @SerializedName("lastlogoff")
-    private final Long mLastLogOff;
+    private final Long lastLogOff;
     @SerializedName("profileurl")
-    private final String mProfileUrl;
+    private final String profileUrl;
     @SerializedName("avatar")
-    private final String mAvatar;
+    private final String avatar;
     @SerializedName("avatarmedium")
-    private final String mAvatarMedium;
+    private final String avatarMedium;
     @SerializedName("avatarfull")
-    private final String mAvatarFull;
+    private final String avatarFull;
     @SerializedName("personastate")
-    private final Integer mPersonaState;
+    private final Integer personaState;
     @SerializedName("primaryclanid")
-    private final String mPrimaryClanId;
+    private final String primaryClanId;
     @SerializedName("timecreated")
-    private final Integer mTimeCreated;
+    private final Integer timeCreated;
     @SerializedName("personastateflags")
-    private final Integer mPersonaStateFlags;
+    private final Integer personaStateFlags;
     @SerializedName("loccountrycode")
-    private final String mLocCountryCode;
+    private final String locCountryCode;
     @SerializedName("locstatecode")
-    private final String mLocStateCode;
+    private final String locStateCode;
 
 
     public SteamAccountDetailsImpl(final String steamId, final Integer communityVisibilityState, final Integer profileState, final String personaName, final Long lastLogOff, final String profileUrl, final String avatar, final String avatarMedium, final String avatarFull, final Integer personaState, final String primaryClanId, final Integer timeCreated, final Integer personaStateFlags, final String locCountryCode, final String locStateCode) {
-        mSteamId = steamId;
-        mCommunityVisibilityState = communityVisibilityState;
-        mProfileState = profileState;
-        mPersonaName = personaName;
-        mLastLogOff = lastLogOff;
-        mProfileUrl = profileUrl;
-        mAvatar = avatar;
-        mAvatarMedium = avatarMedium;
-        mAvatarFull = avatarFull;
-        mPersonaState = personaState;
-        mPrimaryClanId = primaryClanId;
-        mTimeCreated = timeCreated;
-        mPersonaStateFlags = personaStateFlags;
-        mLocCountryCode = locCountryCode;
-        mLocStateCode = locStateCode;
+        SteamId = steamId;
+        this.communityVisibilityState = communityVisibilityState;
+        this.profileState = profileState;
+        this.personaName = personaName;
+        this.lastLogOff = lastLogOff;
+        this.profileUrl = profileUrl;
+        this.avatar = avatar;
+        this.avatarMedium = avatarMedium;
+        this.avatarFull = avatarFull;
+        this.personaState = personaState;
+        this.primaryClanId = primaryClanId;
+        this.timeCreated = timeCreated;
+        this.personaStateFlags = personaStateFlags;
+        this.locCountryCode = locCountryCode;
+        this.locStateCode = locStateCode;
     }
 
     @Override
     public String getSteamId() {
-        return mSteamId;
+        return SteamId;
     }
 
     @Override
     public String getAvatar() {
-        return mAvatar;
+        return this.avatar;
     }
 
     @Override
     public Integer getCommunityVisibilityState() {
-        return mCommunityVisibilityState;
+        return this.communityVisibilityState;
     }
 
     @Override
     public Integer getProfileState() {
-        return mProfileState;
+        return profileState;
     }
 
     @Override
     public String getPersonaName() {
-        return mPersonaName;
+        return personaName;
     }
 
     @Override
     public Long getLastLogOff() {
-        return mLastLogOff;
+        return lastLogOff;
     }
 
     @Override
     public String getProfileUrl() {
-        return mProfileUrl;
+        return profileUrl;
     }
 
     @Override
     public String getAvatarMedium() {
-        return mAvatarMedium;
+        return this.avatarMedium;
     }
 
     @Override
     public String getAvatarFull() {
-        return mAvatarFull;
+        return this.avatarFull;
     }
 
     @Override
     public Integer getPersonaState() {
-        return mPersonaState;
+        return personaState;
     }
 
     @Override
     public String getPrimaryClanId() {
-        return mPrimaryClanId;
+        return primaryClanId;
     }
 
     @Override
     public Integer getTimeCreated() {
-        return mTimeCreated;
+        return timeCreated;
     }
 
     @Override
     public Integer getPersonaStateFlags() {
-        return mPersonaStateFlags;
+        return personaStateFlags;
     }
 
     @Override
     public String getLocCountryCode() {
-        return mLocCountryCode;
+        return locCountryCode;
     }
 
     @Override
     public String getLocStateCode() {
-        return mLocStateCode;
+        return locStateCode;
     }
 
 }

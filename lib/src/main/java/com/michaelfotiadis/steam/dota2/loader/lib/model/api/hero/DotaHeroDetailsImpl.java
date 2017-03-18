@@ -6,247 +6,246 @@ import com.google.gson.annotations.SerializedName;
 public class DotaHeroDetailsImpl implements DotaHeroDetails {
 
     @SerializedName("ID")
-    private final int mId;
+    private final Integer id;
     @SerializedName("Patch")
-    private final String mPatch;
+    private final String patch;
     @SerializedName("Name")
-    private final String mName;
+    private final String name;
     @SerializedName("Alignment")
-    private final int mAlignment;
+    private final Integer alignment;
     @SerializedName("Movespeed")
-    private final int mMoveSpeed;
+    private final Integer moveSpeed;
     @SerializedName("MaxDmg")
-    private final int mMaxDmg;
+    private final Integer maxDmg;
     @SerializedName("MinDmg")
-    private final int mMinDmg;
+    private final Integer minDmg;
     @SerializedName("HP")
-    private final int mHp;
+    private final Integer hp;
     @SerializedName("Mana")
-    private final int mMana;
+    private final Integer mana;
     @SerializedName("HPRegen")
-    private final float mHPRegen;
+    private final Float hpRegen;
     @SerializedName("ManaRegen")
-    private final float mManaRegen;
+    private final Float manaRegen;
     @SerializedName("Armor")
-    private final float mArmor;
+    private final Float armor;
     @SerializedName("Range")
-    private final int mRange;
+    private final Integer range;
     @SerializedName("ProjectileSpeed")
-    private final int mProjectileSpeed;
+    private final Integer projectileSpeed;
     @SerializedName("BaseStr")
-    private final int mBaseStr;
+    private final Integer baseStr;
     @SerializedName("BaseAgi")
-    private final int mBaseAgi;
+    private final Integer baseAgi;
     @SerializedName("BaseInt")
-    private final int mBaseInt;
+    private final Integer baseInt;
     @SerializedName("StrGain")
-    private final float mStrGain;
+    private final Float strGain;
     @SerializedName("AgiGain")
-    private final float mAgiGain;
+    private final Float agiGain;
     @SerializedName("IntGain")
-    private final float mIntGain;
+    private final Float intGain;
     @SerializedName("PrimaryStat")
-    private final int mPrimaryStat;
+    private final Integer primaryStat;
     @SerializedName("BaseAttackTime")
-    private final float mBaseAttackTime;
+    private final Float baseAttackTime;
     @SerializedName("DayVision")
-    private final int mDayVision;
+    private final Integer dayVision;
     @SerializedName("NightVision")
-    private final int mNightVision;
+    private final Integer nightVision;
     @SerializedName("AttackPoint")
-    private final float mAttackPoint;
+    private final Float attackPoint;
     @SerializedName("AttackSwing")
-    private final float mAttackSwing;
+    private final Float attackSwing;
     @SerializedName("CastPoint")
-    private final float mCastPoint;
+    private final Float castPoint;
     @SerializedName("CastSwing")
-    private final float mCastSwing;
+    private final Float castSwing;
     @SerializedName("Turnrate")
-    private final float mTurnrate;
+    private final Float turnrate;
     @SerializedName("Legs")
-    private final int mLegs;
+    private final Integer legs;
 
-    public DotaHeroDetailsImpl(final int id, final String patch, final String name, final int alignment, final int moveSpeed, final int maxDmg, final int minDmg, final int hp, final int mana, final float HPRegen, final float manaRegen, final float armor, final int range, final int projectileSpeed, final int baseStr, final int baseAgi, final int baseInt, final float strGain, final float agiGain, final float intGain, final int primaryStat, final float baseAttackTime, final int dayVision, final int nightVision, final float attackPoint, final float attackSwing, final float castPoint, final float castSwing, final float turnrate, final int legs) {
-        mId = id;
-        mPatch = patch;
-        mName = name;
-        mAlignment = alignment;
-        mMoveSpeed = moveSpeed;
-        mMaxDmg = maxDmg;
-        mMinDmg = minDmg;
-        mHp = hp;
-        mMana = mana;
-        mHPRegen = HPRegen;
-        mManaRegen = manaRegen;
-        mArmor = armor;
-        mRange = range;
-        mProjectileSpeed = projectileSpeed;
-        mBaseStr = baseStr;
-        mBaseAgi = baseAgi;
-        mBaseInt = baseInt;
-        mStrGain = strGain;
-        mAgiGain = agiGain;
-        mIntGain = intGain;
-        mPrimaryStat = primaryStat;
-        mBaseAttackTime = baseAttackTime;
-        mDayVision = dayVision;
-        mNightVision = nightVision;
-        mAttackPoint = attackPoint;
-        mAttackSwing = attackSwing;
-        mCastPoint = castPoint;
-        mCastSwing = castSwing;
-        mTurnrate = turnrate;
-        mLegs = legs;
+    public DotaHeroDetailsImpl(final Integer id, final String patch, final String name, final Integer alignment, final Integer moveSpeed, final Integer maxDmg, final Integer minDmg, final Integer hp, final Integer mana, final Float HPRegen, final Float manaRegen, final Float armor, final Integer range, final Integer projectileSpeed, final Integer baseStr, final Integer baseAgi, final Integer baseInt, final Float strGain, final Float agiGain, final Float intGain, final Integer primaryStat, final Float baseAttackTime, final Integer dayVision, final Integer nightVision, final Float attackPoint, final Float attackSwing, final Float castPoint, final Float castSwing, final Float turnrate, final Integer legs) {
+        this.id = id;
+        this.patch = patch;
+        this.name = name;
+        this.alignment = alignment;
+        this.moveSpeed = moveSpeed;
+        this.maxDmg = maxDmg;
+        this.minDmg = minDmg;
+        this.hp = hp;
+        this.mana = mana;
+        this.hpRegen = HPRegen;
+        this.manaRegen = manaRegen;
+        this.armor = armor;
+        this.range = range;
+        this.projectileSpeed = projectileSpeed;
+        this.baseStr = baseStr;
+        this.baseAgi = baseAgi;
+        this.baseInt = baseInt;
+        this.strGain = strGain;
+        this.agiGain = agiGain;
+        this.intGain = intGain;
+        this.primaryStat = primaryStat;
+        this.baseAttackTime = baseAttackTime;
+        this.dayVision = dayVision;
+        this.nightVision = nightVision;
+        this.attackPoint = attackPoint;
+        this.attackSwing = attackSwing;
+        this.castPoint = castPoint;
+        this.castSwing = castSwing;
+        this.turnrate = turnrate;
+        this.legs = legs;
     }
 
     @Override
-    public int getID() {
-        return mId;
+    public Integer getID() {
+        return id;
     }
 
     @Override
     public String getPatch() {
-        return mPatch;
+        return patch;
     }
 
     @Override
     public String getName() {
-        return mName;
+        return name;
     }
 
     @Override
-    public int getAlignment() {
-        return mAlignment;
+    public Integer getAlignment() {
+        return this.alignment;
     }
 
     @Override
-    public int getMovespeed() {
-        return mMoveSpeed;
+    public Integer getMovespeed() {
+        return moveSpeed;
     }
 
     @Override
-    public int getMaxDmg() {
-        return mMaxDmg;
+    public Integer getMaxDmg() {
+        return maxDmg;
     }
 
     @Override
-    public int getMinDmg() {
-        return mMinDmg;
+    public Integer getMinDmg() {
+        return minDmg;
     }
 
     @Override
-    public int getHP() {
-        return mHp;
+    public Integer getHP() {
+        return hp;
     }
 
     @Override
-    public int getMana() {
-        return mMana;
+    public Integer getMana() {
+        return mana;
+    }
+
+    public Float getHpRegen() {
+        return hpRegen;
     }
 
     @Override
-    public float getHPRegen() {
-        return mHPRegen;
+    public Float getManaRegen() {
+        return manaRegen;
     }
 
     @Override
-    public float getManaRegen() {
-        return mManaRegen;
+    public Float getArmor() {
+        return this.armor;
     }
 
     @Override
-    public float getArmor() {
-        return mArmor;
+    public Integer getRange() {
+        return range;
     }
 
     @Override
-    public int getRange() {
-        return mRange;
+    public Integer getProjectileSpeed() {
+        return projectileSpeed;
     }
 
     @Override
-    public int getProjectileSpeed() {
-        return mProjectileSpeed;
+    public Integer getBaseStr() {
+        return this.baseStr;
     }
 
     @Override
-    public int getBaseStr() {
-        return mBaseStr;
+    public Integer getBaseAgi() {
+        return this.baseAgi;
     }
 
     @Override
-    public int getBaseAgi() {
-        return mBaseAgi;
+    public Integer getBaseInt() {
+        return this.baseInt;
     }
 
     @Override
-    public int getBaseInt() {
-        return mBaseInt;
+    public Float getStrGain() {
+        return strGain;
     }
 
     @Override
-    public float getStrGain() {
-        return mStrGain;
+    public Float getAgiGain() {
+        return this.agiGain;
     }
 
     @Override
-    public float getAgiGain() {
-        return mAgiGain;
+    public Float getIntGain() {
+        return intGain;
     }
 
     @Override
-    public float getIntGain() {
-        return mIntGain;
+    public Integer getPrimaryStat() {
+        return primaryStat;
     }
 
     @Override
-    public int getPrimaryStat() {
-        return mPrimaryStat;
+    public Float getBaseAttackTime() {
+        return this.baseAttackTime;
     }
 
     @Override
-    public float getBaseAttackTime() {
-        return mBaseAttackTime;
+    public Integer getDayVision() {
+        return this.dayVision;
     }
 
     @Override
-    public int getDayVision() {
-        return mDayVision;
+    public Integer getNightVision() {
+        return nightVision;
     }
 
     @Override
-    public int getNightVision() {
-        return mNightVision;
+    public Float getAttackPoint() {
+        return this.attackPoint;
     }
 
     @Override
-    public float getAttackPoint() {
-        return mAttackPoint;
+    public Float getAttackSwing() {
+        return this.attackSwing;
     }
 
     @Override
-    public float getAttackSwing() {
-        return mAttackSwing;
+    public Float getCastPoint() {
+        return this.castPoint;
     }
 
     @Override
-    public float getCastPoint() {
-        return mCastPoint;
+    public Float getCastSwing() {
+        return this.castSwing;
     }
 
     @Override
-    public float getCastSwing() {
-        return mCastSwing;
+    public Float getTurnrate() {
+        return turnrate;
     }
 
     @Override
-    public float getTurnrate() {
-        return mTurnrate;
-    }
-
-    @Override
-    public int getLegs() {
-        return mLegs;
+    public Integer getLegs() {
+        return legs;
     }
 
 }

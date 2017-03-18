@@ -6,9 +6,11 @@ import com.michaelfotiadis.steam.dota2.loader.lib.model.api.DotaApiModel;
  *
  */
 public interface DotaAbilityUpgrade extends DotaApiModel {
-    int getAbility();
 
-    int getTime();
+    Integer getAbility();
 
-    int getLevel();
+    Integer getTime();
+
+    Integer getLevel();
+
 }

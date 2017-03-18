@@ -6,63 +6,63 @@ import com.michaelfotiadis.steam.dota2.loader.lib.model.api.DotaApiModel;
  *
  */
 public interface DotaHeroDetails extends DotaApiModel {
-    int getID();
+    Integer getID();
 
     String getPatch();
 
     String getName();
 
-    int getAlignment();
+    Integer getAlignment();
 
-    int getMovespeed();
+    Integer getMovespeed();
 
-    int getMaxDmg();
+    Integer getMaxDmg();
 
-    int getMinDmg();
+    Integer getMinDmg();
 
-    int getHP();
+    Integer getHP();
 
-    int getMana();
+    Integer getMana();
 
-    float getHPRegen();
+    Float getHpRegen();
 
-    float getManaRegen();
+    Float getManaRegen();
 
-    float getArmor();
+    Float getArmor();
 
-    int getRange();
+    Integer getRange();
 
-    int getProjectileSpeed();
+    Integer getProjectileSpeed();
 
-    int getBaseStr();
+    Integer getBaseStr();
 
-    int getBaseAgi();
+    Integer getBaseAgi();
 
-    int getBaseInt();
+    Integer getBaseInt();
 
-    float getStrGain();
+    Float getStrGain();
 
-    float getAgiGain();
+    Float getAgiGain();
 
-    float getIntGain();
+    Float getIntGain();
 
-    int getPrimaryStat();
+    Integer getPrimaryStat();
 
-    float getBaseAttackTime();
+    Float getBaseAttackTime();
 
-    int getDayVision();
+    Integer getDayVision();
 
-    int getNightVision();
+    Integer getNightVision();
 
-    float getAttackPoint();
+    Float getAttackPoint();
 
-    float getAttackSwing();
+    Float getAttackSwing();
 
-    float getCastPoint();
+    Float getCastPoint();
 
-    float getCastSwing();
+    Float getCastSwing();
 
-    float getTurnrate();
+    Float getTurnrate();
 
-    int getLegs();
+    Integer getLegs();
 }

@@ -5,13 +5,13 @@ import com.michaelfotiadis.steam.dota2.loader.lib.model.api.match.DotaMatchHisto
 
 public class MatchHistoryResponse {
     @SerializedName("result")
-    private final DotaMatchHistory mResult;
+    private final DotaMatchHistory result;
 
     public MatchHistoryResponse(DotaMatchHistory result) {
-        this.mResult = result;
+        this.result = result;
     }
     public DotaMatchHistory getResult() {
-        return mResult;
+        return result;
     }
 
 }

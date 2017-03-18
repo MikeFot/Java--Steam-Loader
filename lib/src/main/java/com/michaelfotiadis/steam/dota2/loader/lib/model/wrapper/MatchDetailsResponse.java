@@ -5,13 +5,13 @@ import com.michaelfotiadis.steam.dota2.loader.lib.model.api.match.DotaMatchDetai
 
 public class MatchDetailsResponse {
     @SerializedName("result")
-    private final DotaMatchDetails mResult;
+    private final DotaMatchDetails result;
 
     public MatchDetailsResponse(DotaMatchDetails result) {
-        this.mResult = result;
+        this.result = result;
     }
     public DotaMatchDetails getResult() {
-        return mResult;
+        return result;
     }
 
 }

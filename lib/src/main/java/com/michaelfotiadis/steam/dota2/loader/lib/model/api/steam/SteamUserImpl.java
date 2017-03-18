@@ -5,23 +5,23 @@ package com.michaelfotiadis.steam.dota2.loader.lib.model.api.steam;
  */
 public class SteamUserImpl implements SteamUser {
 
-    private final SteamAccountDetails mAccountDetails;
-    private final SteamLibrary mGameLibrary;
+    private final SteamAccountDetails accountDetails;
+    private final SteamLibrary gameLibrary;
 
 
     public SteamUserImpl(final SteamAccountDetails accountDetails, final SteamLibrary gameLibrary) {
-        mAccountDetails = accountDetails;
-        mGameLibrary = gameLibrary;
+        this.accountDetails = accountDetails;
+        this.gameLibrary = gameLibrary;
     }
 
     @Override
     public SteamAccountDetails getAccountDetails() {
-        return mAccountDetails;
+        return this.accountDetails;
     }
 
     @Override
     public SteamLibrary getGameLibrary() {
-        return mGameLibrary;
+        return this.gameLibrary;
     }
 
 }
