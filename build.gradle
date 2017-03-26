@@ -6,6 +6,7 @@ ext.minSdkVersion = 15
 ext.compileSdkVersion = 25
 ext.targetSdkVersion = 25
 // Lib Versions
+ext.butterKnifeVersion = "8.5.1"
 ext.appCompatLibVersion = "25.2.0"
 ext.retrofit2Version = "2.2.0"
 ext.retrofitGsonVersion = "2.2.0"
