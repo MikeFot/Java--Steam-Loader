@@ -1,16 +1,8 @@
-
-
-// Project Settings
-ext.buildToolsVersion = '25.0.2'
-ext.minSdkVersion = 15
-ext.compileSdkVersion = 25
-ext.targetSdkVersion = 25
 // Lib Versions
 ext.retrofit2Version = "2.2.0"
 ext.retrofitGsonVersion = "2.2.0"
 ext.okhttp3Version = "3.6.0"
 ext.okhttp3LoggingVersion = "3.6.0"
-ext.gsonVersion = "2.4"
 
 buildscript {
     repositories {
