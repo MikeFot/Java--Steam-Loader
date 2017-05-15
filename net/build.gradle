@@ -1,7 +1,22 @@
 apply plugin: 'java'
+apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
 
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
+
+final int versionMajor = 1
+final int versionMinor = 0
+final int versionPatch = 0
+
+final String gitHubRepo = 'MikeFot/Android--Steam-Loader'
+final String artifactName = 'java-steam-loader'
+final String artifactDesc = 'Java library for fetching data from Steam'
+final String[] tags = ['steam', 'java', 'android']
+
+final String artifactGroupId = 'com.michaelfotiadis'
+final String semanticVersion = "${versionMajor}.${versionMinor}.${versionPatch}"
+final String gitHubUrl = "https://github.com/${gitHubRepo}"
 
 dependencies {
     compile "com.squareup.retrofit2:retrofit:${retrofit2Version}"
@@ -10,5 +25,71 @@ dependencies {
     compile "com.squareup.okhttp3:okhttp:${okhttp3Version}"
     compile project(':dota')
     compile project(':steam')
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            if (plugins.hasPlugin('war')) {
+                from components.web
+            } else {
+                from components.java
+            }
+
+            groupId artifactGroupId
+            artifactId artifactName
+            version semanticVersion
+
+            artifact sourcesJar
+            artifact javadocJar
+        }
+    }
+}
+
+bintray {
+    user = project.hasProperty('mfJCenterUser') ? mfJCenterUser : "<NO USER NAME>"
+    key = project.hasProperty('mfJCenterToken') ? mfJCenterToken : "<NO TOKEN>"
+
+    dryRun = false
+    publish = false
+    publications = ['mavenJava']
+    pkg {
+        repo = 'maven'
+        // userOrg = 'myorg' //An optional organization name when the repo belongs to one of the user's orgs
+        name = artifactName
+        desc = artifactDesc
+        websiteUrl = "${gitHubUrl}"
+        issueTrackerUrl = "${gitHubUrl}/issues"
+        vcsUrl = "${gitHubUrl}.git"
+        labels = tags
+        licenses = ['Apache-2.0']
+        publicDownloadNumbers = true
+        githubRepo = "${gitHubRepo}"
+        githubReleaseNotesFile = 'README.md'
+
+        version {
+            name = semanticVersion
+            //desc = 'optional, version-specific description'
+            mavenCentralSync {
+                sync = false
+                // Optional (true by default). Determines whether to sync the version to Maven Central.
+                user = 'userToken' //OSS user token
+                password = 'paasword' //OSS user password
+                close = '1'
+                // Optional property. By default the staging repository is closed and artifacts are released to Maven Central.
+                // You can optionally turn this behaviour off (by puting 0 as value) and release the version manually.
+            }
+        }
+    }
+
+    task sourcesJar(type: Jar, dependsOn: classes) {
+        classifier = 'sources'
+        from sourceSets.main.allSource
+    }
+
+    task javadocJar(type: Jar, dependsOn: javadoc) {
+        classifier = 'javadoc'
+        from javadoc.destinationDir
+    }
 }
 
