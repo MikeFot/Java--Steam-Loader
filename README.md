@@ -6,11 +6,16 @@ Java library for downloading Dota2 Data from Steam
 #### Instantiation
 - `new SteamLoader(key, isDebugEnabled)`
 
-- `nnew SteamLoader(key)`
+- `new SteamLoader(key)`
 
 **Option 1:** Instantiate a new #SteamLoader# providing a String Steam API Developer key and a flag for enablind debug.
 
 **Option 2:** Same as Option 1, but debug enabled reverts to `false`.
+
+There are 3 data providers available via the `SteamLoader` instance:
+- `PlayerProvider`: Calls for looking up a Steam User / Player
+- `GamesProvider`: Calls for retrieving a user's Steam Library
+- `Dota2 Provider`: Calls for retrieving Dota2 related data
 
 ## Importing into your project
 
