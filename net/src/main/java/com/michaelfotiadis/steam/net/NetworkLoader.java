@@ -3,7 +3,7 @@ package com.michaelfotiadis.steam.net;
 import com.google.gson.Gson;
 import com.michaelfotiadis.steam.net.api.Dota2Api;
 import com.michaelfotiadis.steam.net.api.GamesApi;
-import com.michaelfotiadis.steam.net.api.SteamApi;
+import com.michaelfotiadis.steam.net.api.PlayerApi;
 import com.michaelfotiadis.steam.net.gson.SteamGson;
 
 public class NetworkLoader {
@@ -28,8 +28,8 @@ public class NetworkLoader {
         return this.steamRestClient.getGamesApi();
     }
 
-    public SteamApi getSteamApi() {
-        return this.steamRestClient.getSteamApi();
+    public PlayerApi getPlayerApi() {
+        return this.steamRestClient.getPlayerApi();
     }
 
 }

@@ -11,7 +11,7 @@ public interface GamesApi {
     @GET("IPlayerService/GetOwnedGames/v0001/?format=json")
     Call<LibraryResponse> getGamesList(@Query("key") String key,
                                        @Query("steamid") String id,
-                                       @Query("include_appinfo") int includeAppInfo,
-                                       @Query("include_played_free_games") int includePlayedFreeGames);
+                                       @Query("include_appinfo") boolean includeAppInfo,
+                                       @Query("include_played_free_games") boolean includePlayedFreeGames);
 
 }

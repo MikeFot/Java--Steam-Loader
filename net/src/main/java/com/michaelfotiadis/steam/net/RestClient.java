@@ -3,7 +3,7 @@ package com.michaelfotiadis.steam.net;
 import com.google.gson.Gson;
 import com.michaelfotiadis.steam.net.api.Dota2Api;
 import com.michaelfotiadis.steam.net.api.GamesApi;
-import com.michaelfotiadis.steam.net.api.SteamApi;
+import com.michaelfotiadis.steam.net.api.PlayerApi;
 
 import retrofit2.Retrofit;
 
@@ -27,8 +27,8 @@ public class RestClient {
         return createApi(GamesApi.class);
     }
 
-    public SteamApi getSteamApi() {
-        return createApi(SteamApi.class);
+    public PlayerApi getPlayerApi() {
+        return createApi(PlayerApi.class);
     }
 
     private synchronized <T> T createApi(final Class<T> clazz) {

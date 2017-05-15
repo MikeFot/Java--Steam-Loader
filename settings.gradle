@@ -1,1 +1,1 @@
-include ':dota', ':sample', ':steam', ':net'
+include ':dota', ':steam', ':net'
