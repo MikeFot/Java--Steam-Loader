@@ -1,6 +1,6 @@
 package com.michaelfotiadis.steam.provider;
 
-import com.michaelfotiadis.steam.provider.net.callback.Reason;
+import com.michaelfotiadis.steam.net.callback.Reason;
 
 public interface SteamCallback<T> {
 

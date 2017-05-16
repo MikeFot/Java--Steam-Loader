@@ -1,7 +1,7 @@
 package com.michaelfotiadis.steam.data.player.response;
 
 import com.google.gson.annotations.SerializedName;
-import com.michaelfotiadis.steam.data.player.api.AccountDetails;
+import com.michaelfotiadis.steam.data.player.model.AccountDetails;
 
 import java.util.List;
 

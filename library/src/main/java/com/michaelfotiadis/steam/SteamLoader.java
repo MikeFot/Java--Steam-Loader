@@ -1,20 +1,22 @@
 package com.michaelfotiadis.steam;
 
-import com.michaelfotiadis.steam.provider.net.NetworkLoader;
-import com.michaelfotiadis.steam.provider.Dota2Provider;
-import com.michaelfotiadis.steam.provider.GamesProvider;
-import com.michaelfotiadis.steam.provider.PlayerProvider;
+import com.michaelfotiadis.steam.net.NetworkLoader;
+import com.michaelfotiadis.steam.provider.dota.Dota2ApiProvider;
+import com.michaelfotiadis.steam.provider.games.GamesApiProvider;
+import com.michaelfotiadis.steam.provider.player.PlayerApiProvider;
 
 public class SteamLoader {
 
     private final String key;
     private final NetworkLoader networkLoader;
-    private Dota2Provider dota2Provider;
-    private GamesProvider gamesProvider;
-    private PlayerProvider playerProvider;
+    private final boolean isDebugEnabled;
+    private Dota2ApiProvider dota2Provider;
+    private GamesApiProvider gamesProvider;
+    private PlayerApiProvider playerProvider;
 
     public SteamLoader(final String key, final boolean isDebugEnabled) {
         this.key = key;
+        this.isDebugEnabled = isDebugEnabled;
         this.networkLoader = new NetworkLoader(isDebugEnabled);
     }
 
@@ -22,23 +24,23 @@ public class SteamLoader {
         this(key, false);
     }
 
-    public Dota2Provider getDota2Provider() {
+    public Dota2ApiProvider getDota2Provider() {
         if (dota2Provider == null) {
-            dota2Provider = new Dota2Provider(key, networkLoader.getDota2Api());
+            dota2Provider = new Dota2ApiProvider(key, isDebugEnabled, networkLoader.getDota2Api());
         }
         return dota2Provider;
     }
 
-    public GamesProvider getGamesProvider() {
+    public GamesApiProvider getGamesProvider() {
         if (gamesProvider == null) {
-            gamesProvider = new GamesProvider(key, networkLoader.getGamesApi());
+            gamesProvider = new GamesApiProvider(key, networkLoader.getGamesApi());
         }
         return gamesProvider;
     }
 
-    public PlayerProvider getPlayerProvider() {
+    public PlayerApiProvider getPlayerProvider() {
         if (playerProvider == null) {
-            playerProvider = new PlayerProvider(key, networkLoader.getPlayerApi());
+            playerProvider = new PlayerApiProvider(key, networkLoader.getPlayerApi());
         }
         return playerProvider;
     }

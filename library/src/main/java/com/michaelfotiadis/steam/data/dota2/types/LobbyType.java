@@ -20,7 +20,7 @@ public enum LobbyType {
     private final int value;
     private final String text;
 
-    private LobbyType(final int value, final String text) {
+    LobbyType(final int value, final String text) {
         this.value = value;
         this.text = text;
     }
@@ -29,7 +29,7 @@ public enum LobbyType {
         return value;
     }
 
-    public static LobbyType getType(final int value) {
+    public static LobbyType fromValue(final int value) {
         for (final LobbyType mode : LobbyType.values()) {
             if (mode.value == value) {
                 return mode;

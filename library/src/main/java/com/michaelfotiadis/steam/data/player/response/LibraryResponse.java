@@ -1,7 +1,7 @@
 package com.michaelfotiadis.steam.data.player.response;
 
 import com.google.gson.annotations.SerializedName;
-import com.michaelfotiadis.steam.data.player.api.Library;
+import com.michaelfotiadis.steam.data.player.model.Library;
 
 public class LibraryResponse {
     @SerializedName("response")
