@@ -1,8 +1,4 @@
-// Lib Versions
-ext.retrofit2Version = "2.2.0"
-ext.retrofitGsonVersion = "2.2.0"
-ext.okhttp3Version = "3.6.0"
-ext.okhttp3LoggingVersion = "3.6.0"
+
 
 buildscript {
     repositories {
@@ -23,18 +19,4 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
-}
-
-def quoteString(final String str) {
-    final String quote = "\"";
-
-    if (str.length() > 0) {
-        if (str.startsWith(quote) && str.endsWith(quote)) {
-            return str;
-        } else {
-            return quote + str + quote;
-        }
-    } else {
-        return quote + quote;
-    }
 }
