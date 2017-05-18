@@ -1,0 +1,164 @@
+{
+  "result": {
+    "status": 1,
+    "matches": [
+      {
+        "players": [
+          {
+            "account_id": 4294967295,
+            "player_slot": 0,
+            "hero_id": 13,
+            "item_0": 13,
+            "item_1": 38,
+            "item_2": 29,
+            "item_3": 34,
+            "item_4": 44,
+            "item_5": 0,
+            "backpack_0": 0,
+            "backpack_1": 0,
+            "backpack_2": 0,
+            "kills": 0,
+            "deaths": 2,
+            "assists": 0,
+            "leaver_status": 0,
+            "last_hits": 8,
+            "denies": 1,
+            "gold_per_min": 159,
+            "xp_per_min": 318,
+            "level": 5,
+            "hero_damage": 514,
+            "tower_damage": 5,
+            "hero_healing": 0,
+            "gold": 194,
+            "gold_spent": 1050,
+            "scaled_hero_damage": 0,
+            "scaled_tower_damage": 0,
+            "scaled_hero_healing": 0,
+            "ability_upgrades": [
+              {
+                "ability": 5072,
+                "time": 98,
+                "level": 1
+              },
+              {
+                "ability": 5069,
+                "time": 232,
+                "level": 2
+              },
+              {
+                "ability": 5072,
+                "time": 251,
+                "level": 3
+              },
+              {
+                "ability": 5071,
+                "time": 280,
+                "level": 4
+              },
+              {
+                "ability": 5071,
+                "time": 432,
+                "level": 5
+              }
+            ]
+          },
+          {
+            "account_id": 4294967295,
+            "player_slot": 128,
+            "hero_id": 97,
+            "item_0": 41,
+            "item_1": 36,
+            "item_2": 29,
+            "item_3": 182,
+            "item_4": 0,
+            "item_5": 0,
+            "backpack_0": 0,
+            "backpack_1": 0,
+            "backpack_2": 0,
+            "kills": 2,
+            "deaths": 0,
+            "assists": 0,
+            "leaver_status": 0,
+            "last_hits": 23,
+            "denies": 3,
+            "gold_per_min": 452,
+            "xp_per_min": 500,
+            "level": 7,
+            "hero_damage": 3182,
+            "tower_damage": 0,
+            "hero_healing": 0,
+            "gold": 1350,
+            "gold_spent": 1840,
+            "scaled_hero_damage": 0,
+            "scaled_tower_damage": 0,
+            "scaled_hero_healing": 0,
+            "ability_upgrades": [
+              {
+                "ability": 5518,
+                "time": 133,
+                "level": 1
+              },
+              {
+                "ability": 5520,
+                "time": 214,
+                "level": 2
+              },
+              {
+                "ability": 5518,
+                "time": 243,
+                "level": 3
+              },
+              {
+                "ability": 5520,
+                "time": 319,
+                "level": 4
+              },
+              {
+                "ability": 5518,
+                "time": 363,
+                "level": 5
+              },
+              {
+                "ability": 5521,
+                "time": 427,
+                "level": 6
+              }
+            ]
+          }
+        ],
+        "radiant_win": false,
+        "duration": 313,
+        "pre_game_duration": 90,
+        "start_time": 1468106364,
+        "match_id": 6209183,
+        "match_seq_num": 14,
+        "tower_status_radiant": 2047,
+        "tower_status_dire": 2047,
+        "barracks_status_radiant": 63,
+        "barracks_status_dire": 63,
+        "cluster": 111,
+        "first_blood_time": 179,
+        "lobby_type": 9,
+        "human_players": 2,
+        "leagueid": 0,
+        "positive_votes": 0,
+        "negative_votes": 1,
+        "game_mode": 21,
+        "flags": 0,
+        "engine": 1,
+        "radiant_score": 0,
+        "dire_score": 2,
+        "tournament_id": 1,
+        "tournament_round": 3,
+        "radiant_team_id": 1,
+        "radiant_name": "Jon Jones Fan Club",
+        "radiant_logo": 0,
+        "radiant_team_complete": 1,
+        "dire_team_id": 2,
+        "dire_name": "{s:team_name} (jk, lol)",
+        "dire_logo": 0,
+        "dire_team_complete": 1
+      }
+    ]
+  }
+}

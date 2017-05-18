@@ -1,68 +1,223 @@
 package com.michaelfotiadis.steam.data.dota2.model.hero;
 
+
+import com.google.gson.annotations.SerializedName;
 import com.michaelfotiadis.steam.data.dota2.model.DotaApiModel;
 
-/**
- *
- */
-public interface HeroDetails extends DotaApiModel {
-    Integer getID();
+public class HeroDetails implements DotaApiModel {
 
-    String getPatch();
+    @SerializedName("ID")
+    private final Integer id;
+    @SerializedName("Patch")
+    private final String patch;
+    @SerializedName("Name")
+    private final String name;
+    @SerializedName("Alignment")
+    private final Integer alignment;
+    @SerializedName("Movespeed")
+    private final Integer moveSpeed;
+    @SerializedName("MaxDmg")
+    private final Integer maxDmg;
+    @SerializedName("MinDmg")
+    private final Integer minDmg;
+    @SerializedName("HP")
+    private final Integer hp;
+    @SerializedName("Mana")
+    private final Integer mana;
+    @SerializedName("HPRegen")
+    private final Float hpRegen;
+    @SerializedName("ManaRegen")
+    private final Float manaRegen;
+    @SerializedName("Armor")
+    private final Float armor;
+    @SerializedName("Range")
+    private final Integer range;
+    @SerializedName("ProjectileSpeed")
+    private final Integer projectileSpeed;
+    @SerializedName("BaseStr")
+    private final Integer baseStr;
+    @SerializedName("BaseAgi")
+    private final Integer baseAgi;
+    @SerializedName("BaseInt")
+    private final Integer baseInt;
+    @SerializedName("StrGain")
+    private final Float strGain;
+    @SerializedName("AgiGain")
+    private final Float agiGain;
+    @SerializedName("IntGain")
+    private final Float intGain;
+    @SerializedName("PrimaryStat")
+    private final Integer primaryStat;
+    @SerializedName("BaseAttackTime")
+    private final Float baseAttackTime;
+    @SerializedName("DayVision")
+    private final Integer dayVision;
+    @SerializedName("NightVision")
+    private final Integer nightVision;
+    @SerializedName("AttackPoint")
+    private final Float attackPoint;
+    @SerializedName("AttackSwing")
+    private final Float attackSwing;
+    @SerializedName("CastPoint")
+    private final Float castPoint;
+    @SerializedName("CastSwing")
+    private final Float castSwing;
+    @SerializedName("Turnrate")
+    private final Float turnrate;
+    @SerializedName("Legs")
+    private final Integer legs;
 
-    String getName();
+    public HeroDetails(final Integer id, final String patch, final String name, final Integer alignment, final Integer moveSpeed, final Integer maxDmg, final Integer minDmg, final Integer hp, final Integer mana, final Float HPRegen, final Float manaRegen, final Float armor, final Integer range, final Integer projectileSpeed, final Integer baseStr, final Integer baseAgi, final Integer baseInt, final Float strGain, final Float agiGain, final Float intGain, final Integer primaryStat, final Float baseAttackTime, final Integer dayVision, final Integer nightVision, final Float attackPoint, final Float attackSwing, final Float castPoint, final Float castSwing, final Float turnrate, final Integer legs) {
+        this.id = id;
+        this.patch = patch;
+        this.name = name;
+        this.alignment = alignment;
+        this.moveSpeed = moveSpeed;
+        this.maxDmg = maxDmg;
+        this.minDmg = minDmg;
+        this.hp = hp;
+        this.mana = mana;
+        this.hpRegen = HPRegen;
+        this.manaRegen = manaRegen;
+        this.armor = armor;
+        this.range = range;
+        this.projectileSpeed = projectileSpeed;
+        this.baseStr = baseStr;
+        this.baseAgi = baseAgi;
+        this.baseInt = baseInt;
+        this.strGain = strGain;
+        this.agiGain = agiGain;
+        this.intGain = intGain;
+        this.primaryStat = primaryStat;
+        this.baseAttackTime = baseAttackTime;
+        this.dayVision = dayVision;
+        this.nightVision = nightVision;
+        this.attackPoint = attackPoint;
+        this.attackSwing = attackSwing;
+        this.castPoint = castPoint;
+        this.castSwing = castSwing;
+        this.turnrate = turnrate;
+        this.legs = legs;
+    }
 
-    Integer getAlignment();
+    public Integer getID() {
+        return id;
+    }
 
-    Integer getMovespeed();
+    public String getPatch() {
+        return patch;
+    }
 
-    Integer getMaxDmg();
+    public String getName() {
+        return name;
+    }
 
-    Integer getMinDmg();
+    public Integer getAlignment() {
+        return this.alignment;
+    }
 
-    Integer getHP();
+    public Integer getMovespeed() {
+        return moveSpeed;
+    }
 
-    Integer getMana();
+    public Integer getMaxDmg() {
+        return maxDmg;
+    }
 
-    Float getHpRegen();
+    public Integer getMinDmg() {
+        return minDmg;
+    }
 
-    Float getManaRegen();
+    public Integer getHP() {
+        return hp;
+    }
 
-    Float getArmor();
+    public Integer getMana() {
+        return mana;
+    }
 
-    Integer getRange();
+    public Float getHpRegen() {
+        return hpRegen;
+    }
 
-    Integer getProjectileSpeed();
+    public Float getManaRegen() {
+        return manaRegen;
+    }
 
-    Integer getBaseStr();
+    public Float getArmor() {
+        return this.armor;
+    }
 
-    Integer getBaseAgi();
+    public Integer getRange() {
+        return range;
+    }
 
-    Integer getBaseInt();
+    public Integer getProjectileSpeed() {
+        return projectileSpeed;
+    }
 
-    Float getStrGain();
+    public Integer getBaseStr() {
+        return this.baseStr;
+    }
 
-    Float getAgiGain();
+    public Integer getBaseAgi() {
+        return this.baseAgi;
+    }
 
-    Float getIntGain();
+    public Integer getBaseInt() {
+        return this.baseInt;
+    }
 
-    Integer getPrimaryStat();
+    public Float getStrGain() {
+        return strGain;
+    }
 
-    Float getBaseAttackTime();
+    public Float getAgiGain() {
+        return this.agiGain;
+    }
 
-    Integer getDayVision();
+    public Float getIntGain() {
+        return intGain;
+    }
 
-    Integer getNightVision();
+    public Integer getPrimaryStat() {
+        return primaryStat;
+    }
 
-    Float getAttackPoint();
+    public Float getBaseAttackTime() {
+        return this.baseAttackTime;
+    }
 
-    Float getAttackSwing();
+    public Integer getDayVision() {
+        return this.dayVision;
+    }
 
-    Float getCastPoint();
+    public Integer getNightVision() {
+        return nightVision;
+    }
 
-    Float getCastSwing();
+    public Float getAttackPoint() {
+        return this.attackPoint;
+    }
 
-    Float getTurnrate();
+    public Float getAttackSwing() {
+        return this.attackSwing;
+    }
 
-    Integer getLegs();
+    public Float getCastPoint() {
+        return this.castPoint;
+    }
+
+    public Float getCastSwing() {
+        return this.castSwing;
+    }
+
+    public Float getTurnrate() {
+        return turnrate;
+    }
+
+    public Integer getLegs() {
+        return legs;
+    }
+
 }

@@ -23,6 +23,10 @@ dependencies {
     compile "com.squareup.retrofit2:converter-gson:${retrofitGsonVersion}"
     compile "com.squareup.okhttp3:logging-interceptor:${okhttp3LoggingVersion}"
     compile "com.squareup.okhttp3:okhttp:${okhttp3Version}"
+
+    // https://mvnrepository.com/artifact/com.google.code.findbugs/jsr305
+    compileOnly "com.google.code.findbugs:jsr305:3.0.2"
+    testCompile 'junit:junit:4.12'
 }
 
 publishing {

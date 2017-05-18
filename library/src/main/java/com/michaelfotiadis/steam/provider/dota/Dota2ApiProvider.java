@@ -1,13 +1,15 @@
 package com.michaelfotiadis.steam.provider.dota;
 
 import com.michaelfotiadis.steam.data.FileFormat;
-import com.michaelfotiadis.steam.data.dota2.model.hero.HeroContainer;
-import com.michaelfotiadis.steam.data.dota2.model.item.ItemResponse;
+import com.michaelfotiadis.steam.data.ResultContainer;
+import com.michaelfotiadis.steam.data.dota2.model.hero.HeroesResponse;
+import com.michaelfotiadis.steam.data.dota2.model.item.ItemsResponse;
 import com.michaelfotiadis.steam.data.dota2.model.match.details.MatchDetailsResponse;
-import com.michaelfotiadis.steam.data.dota2.model.match.history.MatchHistoryResponse;
+import com.michaelfotiadis.steam.data.dota2.model.match.history.MatchHistory;
 import com.michaelfotiadis.steam.data.dota2.model.rarity.Rarities;
 import com.michaelfotiadis.steam.data.dota2.types.GameMode;
 import com.michaelfotiadis.steam.data.dota2.types.SkillBracket;
+import com.michaelfotiadis.steam.data.games.ValveGameIds;
 import com.michaelfotiadis.steam.net.api.dota2.Dota2Api;
 import com.michaelfotiadis.steam.provider.SteamCallback;
 import com.michaelfotiadis.steam.provider.base.ApiProvider;
@@ -24,7 +26,7 @@ public class Dota2ApiProvider extends ApiProvider<Dota2Api> {
     public Dota2ApiProvider(final String key, final boolean isDebugEnabled, final Dota2Api api) {
         super(key, api);
 
-        this.endpointId = isDebugEnabled ? DEV_ENDPOINT_ID : PROD_ENDPOINT_ID;
+        this.endpointId = isDebugEnabled ? ValveGameIds.DOTA_2_BETA.toString() : ValveGameIds.DOTA_2.toString();
 
     }
 
@@ -55,9 +57,9 @@ public class Dota2ApiProvider extends ApiProvider<Dota2Api> {
      */
     public void getMatchHistory(final String accountId,
                                 final Integer numberOfMatches,
-                                final SteamCallback<MatchHistoryResponse> masterCallback) {
+                                final SteamCallback<ResultContainer<MatchHistory>> masterCallback) {
 
-        final Call<MatchHistoryResponse> call = getApi().getMatchHistory(
+        final Call<ResultContainer<MatchHistory>> call = getApi().getMatchHistory(
                 endpointId,
                 getKey(),
                 accountId,
@@ -89,9 +91,9 @@ public class Dota2ApiProvider extends ApiProvider<Dota2Api> {
                                 final String startAtMatchId,
                                 final Boolean tournamentGamesOnly,
                                 final Integer numberOfMatches,
-                                final SteamCallback<MatchHistoryResponse> masterCallback) {
+                                final SteamCallback<ResultContainer<MatchHistory>> masterCallback) {
 
-        final Call<MatchHistoryResponse> call = getApi().getMatchHistory(
+        final Call<ResultContainer<MatchHistory>> call = getApi().getMatchHistory(
                 endpointId, getKey(),
                 accountId,
                 heroId,
@@ -117,9 +119,9 @@ public class Dota2ApiProvider extends ApiProvider<Dota2Api> {
      */
     public void getMatchHistoryBySequenceNumber(final String sequenceNumber,
                                                 final Integer numberOfMatches,
-                                                final SteamCallback<MatchHistoryResponse> masterCallback) {
+                                                final SteamCallback<ResultContainer<MatchHistory>> masterCallback) {
 
-        final Call<MatchHistoryResponse> call = getApi().getMatchHistoryBySequenceNumber(
+        final Call<ResultContainer<MatchHistory>> call = getApi().getMatchHistoryBySequenceNumber(
                 endpointId,
                 getKey(),
                 sequenceNumber,
@@ -138,9 +140,9 @@ public class Dota2ApiProvider extends ApiProvider<Dota2Api> {
      */
     public void getHeroes(final String language,
                           final boolean isItemizedOnly,
-                          final SteamCallback<HeroContainer> masterCallback) {
+                          final SteamCallback<HeroesResponse> masterCallback) {
 
-        final Call<HeroContainer> call = getApi().getHeroes(
+        final Call<HeroesResponse> call = getApi().getHeroes(
                 endpointId,
                 getKey(),
                 language,
@@ -158,9 +160,9 @@ public class Dota2ApiProvider extends ApiProvider<Dota2Api> {
      * @param masterCallback {@link SteamCallback} for delivering the result
      */
     public void getItems(final String language,
-                         final SteamCallback<ItemResponse> masterCallback) {
+                         final SteamCallback<ItemsResponse> masterCallback) {
 
-        final Call<ItemResponse> call = getApi().getItems(
+        final Call<ItemsResponse> call = getApi().getItems(
                 endpointId,
                 getKey(),
                 language,

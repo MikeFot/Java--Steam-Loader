@@ -7,6 +7,7 @@ import java.util.Locale;
 public class ImageProvider extends AssetProvider {
 
     private static final String BASE_ENDPOINT = "http://cdn.dota2.com/apps/dota2/images/";
+    private static final String STEAM_ENDPOINT = "http://media.steampowered.com/steamcommunity/public/images/apps/%s/%s.jpg";
 
     private static final String ENDPOINT_ITEM = BASE_ENDPOINT + "items/%s_%s";
     private static final String ENDPOINT_HERO = BASE_ENDPOINT + "heroes/%s_%s";
@@ -17,7 +18,7 @@ public class ImageProvider extends AssetProvider {
 
     public String getItemImageEndpoint(final String itemName) {
 
-        if (itemName == null || itemName.length() == 0) {
+        if (itemName == null || itemName.isEmpty()) {
             return "";
         }
 
@@ -35,7 +36,7 @@ public class ImageProvider extends AssetProvider {
 
     public String getHeroImageEndpoint(final String heroName, final Size size) {
 
-        if (heroName == null || heroName.length() == 0) {
+        if (heroName == null || heroName.isEmpty()) {
             return "";
         }
 
@@ -45,5 +46,15 @@ public class ImageProvider extends AssetProvider {
 
     }
 
+    public String getGameImageEndpoint(final String appId, final String imageUrl) {
+
+        if (appId == null || imageUrl == null || appId.isEmpty() || imageUrl.isEmpty()) {
+            return "";
+        }
+
+        return String.format(Locale.US, STEAM_ENDPOINT, appId, imageUrl);
+
+
+    }
 
 }

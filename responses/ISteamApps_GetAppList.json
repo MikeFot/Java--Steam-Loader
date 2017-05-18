@@ -1,0 +1,18 @@
+{
+  "applist": {
+    "apps": [
+      {
+        "appid": 5,
+        "name": "Dedicated Server"
+      },
+      {
+        "appid": 7,
+        "name": "Steam Client"
+      },
+      {
+        "appid": 8,
+        "name": "winui2"
+      }
+    ]
+  }
+}

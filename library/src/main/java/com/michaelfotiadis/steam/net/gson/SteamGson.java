@@ -12,13 +12,7 @@ import java.lang.reflect.Modifier;
 
 public final class SteamGson {
 
-    private static Gson GSON;
-
-    private SteamGson() {
-        // NOOP
-    }
-
-    private static Gson buildGson() {
+    public static Gson buildGson() {
 
         final GsonBuilder gson = new GsonBuilder();
 
@@ -33,18 +27,6 @@ public final class SteamGson {
         }
 
         return gson.create();
-    }
-
-    /**
-     * Synchronized getter for the class
-     *
-     * @return Gson object
-     */
-    public static synchronized Gson get() {
-        if (GSON == null) {
-            GSON = buildGson();
-        }
-        return GSON;
     }
 
 }

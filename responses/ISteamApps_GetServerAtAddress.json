@@ -1,0 +1,19 @@
+{
+  "response": {
+    "success": true,
+    "servers": [
+      {
+        "addr": "64.94.100.204:27015",
+        "gmsindex": 65534,
+        "message": "Listed as official server for app in CDDB",
+        "appid": 35450,
+        "gamedir": "ro2",
+        "region": 255,
+        "secure": true,
+        "lan": false,
+        "gameport": 7777,
+        "specport": 0
+      }
+    ]
+  }
+}

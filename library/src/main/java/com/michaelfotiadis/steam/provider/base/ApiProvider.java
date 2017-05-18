@@ -4,6 +4,7 @@ import com.michaelfotiadis.steam.net.callback.NetworkCallback;
 import com.michaelfotiadis.steam.net.callback.Reason;
 import com.michaelfotiadis.steam.net.callback.Retrofit2CallbackFactory;
 import com.michaelfotiadis.steam.provider.SteamCallback;
+import com.michaelfotiadis.steam.utils.SteamIdUtils;
 
 import retrofit2.Call;
 
@@ -30,6 +31,14 @@ public abstract class ApiProvider<D> {
 
         call.enqueue(Retrofit2CallbackFactory.create(callback));
 
+    }
+
+    protected static String sanitiseId64(final String id) {
+        if (SteamIdUtils.isSteamId64(Long.parseLong(id))) {
+            return id;
+        } else {
+            return String.valueOf(SteamIdUtils.steamId3toSteam64(Long.parseLong(id)));
+        }
     }
 
     protected static class WrappedCallback<T> implements NetworkCallback<T> {

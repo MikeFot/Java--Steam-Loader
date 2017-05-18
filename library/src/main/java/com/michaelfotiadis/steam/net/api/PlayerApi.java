@@ -1,10 +1,10 @@
 package com.michaelfotiadis.steam.net.api;
 
-import com.michaelfotiadis.steam.data.player.model.VanityResponse;
-import com.michaelfotiadis.steam.data.player.response.AccountResponse;
+import com.michaelfotiadis.steam.data.player.model.backpack.BackpackResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 /**
@@ -12,14 +12,10 @@ import retrofit2.http.Query;
  */
 public interface PlayerApi {
 
-    @GET("ISteamUser/GetPlayerSummaries/v0002/")
-    Call<AccountResponse> getPlayerById(@Query("key") String key,
-                                        @Query("steamids") String id,
-                                        @Query("format") String format);
 
-    @GET("ISteamUser/ResolveVanityURL/v0001/")
-    Call<VanityResponse> getIdFromVanityUrl(@Query("key") String key,
-                                            @Query("vanityurl") String url,
-                                            @Query("format") String format);
-
+    @GET("IEconItems_{endpoint_id}/GetPlayerItems/v0001/")
+    Call<BackpackResponse> getPlayerItems(@Path("endpoint_id") String endpoint_id,
+                                          @Query("key") String key,
+                                          @Query("steamid") String steamId64,
+                                          @Query("format") String format);
 }

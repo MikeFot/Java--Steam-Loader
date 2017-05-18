@@ -69,4 +69,17 @@ public class ImageProviderTest {
 
     }
 
+    @Test
+    public void testGetSteamImageEndpoint() throws Exception {
+
+        final ImageProvider imageProvider = new ImageProvider();
+
+        final String appId = "3830";
+        final String imageUrl = "460b6471db7d83ee6943c1a87f7a9f2898634952";
+        final String expectedUrl = "http://media.steampowered.com/steamcommunity/public/images/apps/3830/460b6471db7d83ee6943c1a87f7a9f2898634952.jpg";
+        final String actualUrl = imageProvider.getGameImageEndpoint(appId, imageUrl);
+        assertEquals(actualUrl, expectedUrl);
+
+    }
+
 }

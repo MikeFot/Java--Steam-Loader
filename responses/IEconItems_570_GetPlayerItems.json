@@ -1,0 +1,117 @@
+{
+  "result": {
+    "status": 1,
+    "num_backpack_slots": 10120,
+    "items": [
+      {
+        "id": 9966224031,
+        "original_id": 9966224031,
+        "defindex": 4869,
+        "level": 1,
+        "quality": 4,
+        "inventory": 10104,
+        "quantity": 1,
+        "equipped": [
+          {
+            "class": 71,
+            "slot": 6
+          }
+        ]
+      },
+      {
+        "id": 9966224032,
+        "original_id": 9966224032,
+        "defindex": 4870,
+        "level": 1,
+        "quality": 4,
+        "inventory": 10013,
+        "quantity": 1,
+        "equipped": [
+          {
+            "class": 71,
+            "slot": 5
+          }
+        ]
+      },
+      {
+        "id": 9966224033,
+        "original_id": 9966224033,
+        "defindex": 4871,
+        "level": 1,
+        "quality": 4,
+        "inventory": 9858,
+        "quantity": 1,
+        "equipped": [
+          {
+            "class": 71,
+            "slot": 1
+          }
+        ]
+      },
+      {
+        "id": 9966224034,
+        "original_id": 9966224034,
+        "defindex": 4872,
+        "level": 1,
+        "quality": 4,
+        "inventory": 9849,
+        "quantity": 1,
+        "equipped": [
+          {
+            "class": 71,
+            "slot": 2
+          }
+        ]
+      },
+      {
+        "id": 10002951237,
+        "original_id": 10002951237,
+        "defindex": 5986,
+        "level": 1,
+        "quality": 4,
+        "inventory": 10016,
+        "quantity": 1,
+        "flag_cannot_trade": true,
+        "attributes": [
+          {
+            "defindex": 213,
+            "value": 1,
+            "float_value": 0
+          }
+        ]
+      },
+      {
+        "id": 10380089432,
+        "original_id": 5735036977,
+        "defindex": 9119,
+        "level": 1,
+        "quality": 4,
+        "inventory": 2147483684,
+        "quantity": 1,
+        "equipped": [
+          {
+            "class": 90,
+            "slot": 4
+          }
+        ],
+        "flag_cannot_trade": true
+      },
+      {
+        "id": 10380089467,
+        "original_id": 5735036981,
+        "defindex": 9119,
+        "level": 1,
+        "quality": 4,
+        "inventory": 2147483663,
+        "quantity": 1,
+        "equipped": [
+          {
+            "class": 90,
+            "slot": 3
+          }
+        ],
+        "flag_cannot_trade": true
+      }
+    ]
+  }
+}

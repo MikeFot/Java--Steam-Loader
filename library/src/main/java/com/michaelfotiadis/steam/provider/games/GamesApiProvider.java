@@ -20,12 +20,14 @@ public class GamesApiProvider extends ApiProvider<GamesApi> {
                            final boolean includeFreeGames,
                            final SteamCallback<LibraryResponse> masterCallback) {
 
+        final int appInfo = (includeAppInfo) ? 1 : 0;
+        final int freeGames = (includeFreeGames) ? 1 : 0;
 
         final Call<LibraryResponse> call = getApi().getGamesList(
                 getKey(),
-                steamId,
-                includeAppInfo,
-                includeFreeGames,
+                sanitiseId64(steamId),
+                appInfo,
+                freeGames,
                 FileFormat.JSON.toString());
 
         execAsync(call, new WrappedCallback<>(masterCallback));

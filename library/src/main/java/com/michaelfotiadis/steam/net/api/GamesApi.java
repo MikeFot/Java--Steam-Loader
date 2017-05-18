@@ -8,11 +8,11 @@ import retrofit2.http.Query;
 
 public interface GamesApi {
 
-    @GET("IPlayerService/GetOwnedGames/v0001/?format=json")
+    @GET("IPlayerService/GetOwnedGames/v0001/")
     Call<LibraryResponse> getGamesList(@Query("key") String key,
                                        @Query("steamid") String id,
-                                       @Query("include_appinfo") boolean includeAppInfo,
-                                       @Query("include_played_free_games") boolean includePlayedFreeGames,
+                                       @Query("include_appinfo") Integer includeAppInfo,
+                                       @Query("include_played_free_games") Integer includePlayedFreeGames,
                                        @Query("format") String format);
 
 }

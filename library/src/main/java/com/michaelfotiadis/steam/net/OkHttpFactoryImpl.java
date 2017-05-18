@@ -16,15 +16,13 @@ public class OkHttpFactoryImpl implements OkHttpFactory {
     private final boolean enableDebug;
 
     public OkHttpFactoryImpl(final boolean enableDebug) {
+
         this.enableDebug = enableDebug;
+
     }
 
     public OkHttpClient create(final Class<?> clazz) {
-        /**
-         * This is important to avoid using a {@link TokenManager} in {@link LoginApi}
-         * as the job of the {@link TokenManager} is to use the {@link LoginApi} to
-         * refresh the token.
-         */
+
         final List<Interceptor> interceptors = new ArrayList<>();
         interceptors.add(new HeadersInterceptor());
         interceptors.add(new RetryPolicyInterceptor());
@@ -44,7 +42,8 @@ public class OkHttpFactoryImpl implements OkHttpFactory {
     }
 
     private Interceptor createLoggingInterceptor() {
-        final HttpLoggingInterceptor.Level level = enableDebug ? HttpLoggingInterceptor.Level.BASIC : HttpLoggingInterceptor.Level.NONE;
+
+        final HttpLoggingInterceptor.Level level = enableDebug ? HttpLoggingInterceptor.Level.BODY : HttpLoggingInterceptor.Level.NONE;
 
         final HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(level);
