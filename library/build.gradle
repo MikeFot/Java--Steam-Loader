@@ -7,7 +7,7 @@ targetCompatibility = "1.7"
 
 final int versionMajor = 1
 final int versionMinor = 0
-final int versionPatch = 1
+final int versionPatch = 2
 
 final String gitHubRepo = 'MikeFot/Java--Steam-Loader'
 final String artifactName = 'java-steam-loader'
