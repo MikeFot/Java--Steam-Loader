@@ -2,9 +2,8 @@ package com.michaelfotiadis.steam.data.steam.users.friends;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
+import java.util.List;
 
 /**
  * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetFriendList">Wiki</a>

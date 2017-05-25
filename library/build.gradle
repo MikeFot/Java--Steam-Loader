@@ -9,6 +9,10 @@ final int versionMajor = 1
 final int versionMinor = 0
 final int versionPatch = 2
 
+// Lib Versions
+final String retrofit2Version = "2.2.0"
+final String okhttp3Version = "3.6.0"
+
 final String gitHubRepo = 'MikeFot/Java--Steam-Loader'
 final String artifactName = 'java-steam-loader'
 final String artifactDesc = 'Java library for fetching data from Steam'
@@ -20,9 +24,9 @@ final String gitHubUrl = "https://github.com/${gitHubRepo}"
 
 dependencies {
     compile "com.squareup.retrofit2:retrofit:${retrofit2Version}"
-    compile "com.squareup.retrofit2:converter-gson:${retrofitGsonVersion}"
-    compile "com.squareup.okhttp3:logging-interceptor:${okhttp3LoggingVersion}"
+    compile "com.squareup.retrofit2:converter-gson:${retrofit2Version}"
     compile "com.squareup.okhttp3:okhttp:${okhttp3Version}"
+    compile "com.squareup.okhttp3:logging-interceptor:${okhttp3Version}"
 
     // https://mvnrepository.com/artifact/com.google.code.findbugs/jsr305
     compileOnly "com.google.code.findbugs:jsr305:3.0.2"
