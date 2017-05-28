@@ -6,6 +6,9 @@ import com.michaelfotiadis.steam.data.dota2.model.DotaApiModel;
 
 import java.util.List;
 
+/**
+ * See: https://wiki.teamfortress.com/wiki/WebAPI/GetHeroes
+ */
 public class HeroesResponse implements DotaApiModel {
 
     @SerializedName("heroes")

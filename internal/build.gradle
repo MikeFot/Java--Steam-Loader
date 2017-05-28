@@ -8,5 +8,4 @@ repositories {
 
 dependencies {
     compile project(':library')
-    testCompile group: 'junit', name: 'junit', version: '4.11'
 }

@@ -1,8 +1,8 @@
 package com.michaelfotiadis.steam.provider.games;
 
+import com.michaelfotiadis.steam.api.GamesApi;
 import com.michaelfotiadis.steam.data.FileFormat;
 import com.michaelfotiadis.steam.data.player.response.LibraryResponse;
-import com.michaelfotiadis.steam.net.api.GamesApi;
 import com.michaelfotiadis.steam.provider.SteamCallback;
 import com.michaelfotiadis.steam.provider.base.ApiProvider;
 

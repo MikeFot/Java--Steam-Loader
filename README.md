@@ -1,21 +1,10 @@
 # Java--Steam-Loader
 Java library for downloading Dota2 Data from Steam
 
-### Usage
+The project is currently in progress but you are free to use it. It is updated regularly as I am documenting the APIs.
 
-#### Instantiation
-- `new SteamLoader(key, isDebugEnabled)`
-
-- `new SteamLoader(key)`
-
-**Option 1:** Instantiate a new #SteamLoader# providing a String Steam API Developer key and a flag for enablind debug.
-
-**Option 2:** Same as Option 1, but debug enabled reverts to `false`.
-
-There are 3 data providers available via the `SteamLoader` instance:
-- `PlayerProvider`: Calls for looking up a Steam User / Player
-- `GamesProvider`: Calls for retrieving a user's Steam Library
-- `Dota2 Provider`: Calls for retrieving Dota2 related data
+## Usage
+Instantiate a SteamLoader and use it to get Provider wrapper classes or the APIs directly. Happy coding!
 
 ## Importing into your project
 
@@ -33,7 +22,7 @@ allprojects {
 
 And the following to your module Gradle file:
 
-`compile 'com.michaelfotiadis:java-steam-loader:1.0.0'`
+`compile 'com.michaelfotiadis:java-steam-loader:1.0.4'`
 
 **Maven**
 
@@ -41,7 +30,7 @@ And the following to your module Gradle file:
 <dependency>
   <groupId>com.michaelfotiadis</groupId>
   <artifactId>java-steam-loader</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.4</version>
   <type>pom</type>
 </dependency>
 ```

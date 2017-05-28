@@ -5,6 +5,9 @@ import com.michaelfotiadis.steam.data.dota2.model.DotaApiModel;
 
 import java.util.List;
 
+/**
+ * See: https://wiki.teamfortress.com/wiki/WebAPI/GetGameItems
+ */
 public class ItemsResponse implements DotaApiModel {
 
     @SerializedName("items")
@@ -18,6 +21,9 @@ public class ItemsResponse implements DotaApiModel {
         this.status = status;
     }
 
+    /**
+     * @return List of items.
+     */
     public List<Item> getItems() {
         return items;
     }

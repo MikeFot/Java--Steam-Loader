@@ -1,4 +1,4 @@
-package com.michaelfotiadis.steam.net.api.steam;
+package com.michaelfotiadis.steam.api.steam;
 
 import com.michaelfotiadis.steam.data.steam.news.NewsResponse;
 

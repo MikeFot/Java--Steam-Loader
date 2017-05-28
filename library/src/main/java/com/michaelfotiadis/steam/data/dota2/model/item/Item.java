@@ -3,6 +3,9 @@ package com.michaelfotiadis.steam.data.dota2.model.item;
 import com.google.gson.annotations.SerializedName;
 import com.michaelfotiadis.steam.data.dota2.model.DotaApiModel;
 
+/**
+ * See: https://wiki.teamfortress.com/wiki/WebAPI/GetGameItems
+ */
 public class Item implements DotaApiModel {
 
     @SerializedName("id")
@@ -30,30 +33,57 @@ public class Item implements DotaApiModel {
         this.localizedName = localizedName;
     }
 
+    /**
+     * @return ID of the item.
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     *
+     * @return The tokenized string for the name of the item.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     *
+     * @return The in-game gold cost of the item.
+     */
     public Integer getCost() {
         return this.cost;
     }
 
+    /**
+     *
+     * @return Boolean - true if the item is only available in the secret shop.
+     */
     public Integer getSecretShop() {
         return secretShop;
     }
 
+    /**
+     *
+     * @return Boolean - true if the item is available in the side shop.
+     */
     public Integer getSideShop() {
         return sideShop;
     }
 
+    /**
+     *
+     * @return Boolean - true if the item is a recipe type item.
+     */
     public Integer getRecipe() {
         return recipe;
     }
 
+    /**
+     *
+     * @return The localized name of the hero for use in name display. You will get it only if specifie 'language' parameter.
+     */
     public String getLocalizedName() {
         return localizedName;
     }

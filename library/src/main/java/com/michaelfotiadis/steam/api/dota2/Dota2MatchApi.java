@@ -1,18 +1,15 @@
-package com.michaelfotiadis.steam.net.api.dota2;
+package com.michaelfotiadis.steam.api.dota2;
 
 import com.michaelfotiadis.steam.data.ResultContainer;
-import com.michaelfotiadis.steam.data.dota2.model.hero.HeroesResponse;
-import com.michaelfotiadis.steam.data.dota2.model.item.ItemsResponse;
 import com.michaelfotiadis.steam.data.dota2.model.match.details.MatchDetailsResponse;
 import com.michaelfotiadis.steam.data.dota2.model.match.history.MatchHistory;
-import com.michaelfotiadis.steam.data.dota2.model.rarity.Rarities;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
-public interface Dota2Api {
+public interface Dota2MatchApi {
 
     @GET("IDOTA2Match_{endpoint_id}/GetMatchDetails/V1/")
     Call<MatchDetailsResponse> getMatchById(@Path("endpoint_id") String endpoint_id,
@@ -41,23 +38,5 @@ public interface Dota2Api {
                                                                         @Query("matches_requested") Integer matches,
                                                                         @Query("format") String format);
 
-    @GET("IEconDOTA2_{endpoint_id}/GetHeroes/v1")
-    Call<HeroesResponse> getHeroes(@Path("endpoint_id") String endpoint_id,
-                                   @Query("key") String key,
-                                   @Query("language") String language,
-                                   @Query("itemizedonly") Boolean itemizedOnly,
-                                   @Query("format") String format);
-
-    @GET("IEconDOTA2_{endpoint_id}/GetGameItems/v1")
-    Call<ItemsResponse> getItems(@Path("endpoint_id") String endpoint_id,
-                                 @Query("key") String key,
-                                 @Query("language") String language,
-                                 @Query("format") String format);
-
-    @GET("IEconDOTA2_{endpoint_id}/GetRarities/v1")
-    Call<Rarities> getRarities(@Path("endpoint_id") String endpoint_id,
-                               @Query("key") String key,
-                               @Query("language") String language,
-                               @Query("format") String format);
 
 }

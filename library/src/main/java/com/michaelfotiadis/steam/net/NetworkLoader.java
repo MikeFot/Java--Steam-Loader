@@ -1,9 +1,10 @@
 package com.michaelfotiadis.steam.net;
 
 import com.google.gson.Gson;
-import com.michaelfotiadis.steam.net.api.GamesApi;
-import com.michaelfotiadis.steam.net.api.dota2.Dota2Api;
-import com.michaelfotiadis.steam.net.api.steam.UsersApi;
+import com.michaelfotiadis.steam.api.GamesApi;
+import com.michaelfotiadis.steam.api.dota2.Dota2EconApi;
+import com.michaelfotiadis.steam.api.dota2.Dota2MatchApi;
+import com.michaelfotiadis.steam.api.steam.UsersApi;
 import com.michaelfotiadis.steam.net.gson.SteamGson;
 
 public class NetworkLoader {
@@ -22,8 +23,12 @@ public class NetworkLoader {
     }
 
 
-    public Dota2Api getDota2Api() {
-        return this.steamRestClient.getDota2Api();
+    public Dota2MatchApi getDota2MatchApi() {
+        return this.steamRestClient.getDota2MatchApi();
+    }
+
+    public Dota2EconApi getDota2EconApi() {
+        return this.steamRestClient.getDota2EconomyApi();
     }
 
     public GamesApi getGamesApi() {

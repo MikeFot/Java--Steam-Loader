@@ -1,4 +1,4 @@
-package com.michaelfotiadis.steam.net.api;
+package com.michaelfotiadis.steam.api;
 
 import com.michaelfotiadis.steam.data.player.model.backpack.BackpackResponse;
 

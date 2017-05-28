@@ -1,10 +1,10 @@
 package com.michaelfotiadis.steam.provider.player;
 
+import com.michaelfotiadis.steam.api.steam.UsersApi;
 import com.michaelfotiadis.steam.data.FileFormat;
 import com.michaelfotiadis.steam.data.ResponseContainer;
 import com.michaelfotiadis.steam.data.steam.users.player.PlayerSummaries;
 import com.michaelfotiadis.steam.data.steam.users.vanity.Vanity;
-import com.michaelfotiadis.steam.net.api.steam.UsersApi;
 import com.michaelfotiadis.steam.provider.SteamCallback;
 import com.michaelfotiadis.steam.provider.base.ApiProvider;
 

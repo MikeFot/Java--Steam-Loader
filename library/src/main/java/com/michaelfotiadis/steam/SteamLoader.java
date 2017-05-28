@@ -1,12 +1,14 @@
 package com.michaelfotiadis.steam;
 
 import com.google.gson.Gson;
+import com.michaelfotiadis.steam.api.GamesApi;
+import com.michaelfotiadis.steam.api.dota2.Dota2EconApi;
+import com.michaelfotiadis.steam.api.dota2.Dota2MatchApi;
+import com.michaelfotiadis.steam.api.steam.UsersApi;
 import com.michaelfotiadis.steam.net.NetworkLoader;
 import com.michaelfotiadis.steam.net.OkHttpFactory;
-import com.michaelfotiadis.steam.net.api.GamesApi;
-import com.michaelfotiadis.steam.net.api.dota2.Dota2Api;
-import com.michaelfotiadis.steam.net.api.steam.UsersApi;
-import com.michaelfotiadis.steam.provider.dota.Dota2ApiProvider;
+import com.michaelfotiadis.steam.provider.dota.Dota2EconApiProvider;
+import com.michaelfotiadis.steam.provider.dota.Dota2MatchApiProvider;
 import com.michaelfotiadis.steam.provider.games.GamesApiProvider;
 import com.michaelfotiadis.steam.provider.player.PlayerApiProvider;
 
@@ -15,7 +17,8 @@ public class SteamLoader {
     private final String key;
     private final NetworkLoader networkLoader;
     private final boolean isDebugEnabled;
-    private Dota2ApiProvider dota2Provider;
+    private Dota2MatchApiProvider dota2MatchProvider;
+    private Dota2EconApiProvider dota2EconomyApiProvider;
     private GamesApiProvider gamesProvider;
     private PlayerApiProvider playerProvider;
 
@@ -41,8 +44,13 @@ public class SteamLoader {
         this(key, isDebugEnabled, new NetworkLoader(okHttpFactory, gson));
     }
 
-    public Dota2Api getDota2Api() {
-        return networkLoader.getDota2Api();
+    public Dota2MatchApi getDota2MatchApi() {
+        return networkLoader.getDota2MatchApi();
+    }
+
+
+    public Dota2EconApi getDota2EconomyApi() {
+        return networkLoader.getDota2EconApi();
     }
 
     public GamesApi getGamesApi() {
@@ -53,11 +61,18 @@ public class SteamLoader {
         return networkLoader.getUsersApi();
     }
 
-    public Dota2ApiProvider getDota2Provider() {
-        if (dota2Provider == null) {
-            dota2Provider = new Dota2ApiProvider(key, isDebugEnabled, networkLoader.getDota2Api());
+    public Dota2MatchApiProvider getDota2MatchProvider() {
+        if (dota2MatchProvider == null) {
+            dota2MatchProvider = new Dota2MatchApiProvider(key, isDebugEnabled, networkLoader.getDota2MatchApi());
         }
-        return dota2Provider;
+        return dota2MatchProvider;
+    }
+
+    public Dota2EconApiProvider getDota2EconomyApiProvider() {
+        if (dota2EconomyApiProvider == null) {
+            dota2EconomyApiProvider = new Dota2EconApiProvider(key, isDebugEnabled, networkLoader.getDota2EconApi());
+        }
+        return dota2EconomyApiProvider;
     }
 
     public GamesApiProvider getGamesProvider() {
