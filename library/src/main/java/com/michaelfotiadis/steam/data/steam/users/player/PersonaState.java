@@ -1,5 +1,7 @@
 package com.michaelfotiadis.steam.data.steam.users.player;
 
+import com.michaelfotiadis.steam.data.player.SteamApiModel;
+
 /**
  * 0
  * Offline (Also set when the profile is Private)
@@ -16,7 +18,7 @@ package com.michaelfotiadis.steam.data.steam.users.player;
  * 6
  * Looking to play
  */
-public enum PersonaState {
+public enum PersonaState implements SteamApiModel {
 
     UNKNOWN(-1),
     OFFLINE_PRIVATE(0),

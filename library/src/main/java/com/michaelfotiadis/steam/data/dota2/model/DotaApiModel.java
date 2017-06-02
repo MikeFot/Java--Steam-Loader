@@ -1,5 +1,7 @@
 package com.michaelfotiadis.steam.data.dota2.model;
 
-public interface DotaApiModel {
+import java.io.Serializable;
+
+public interface DotaApiModel extends Serializable {
     // Marker Interface
 }

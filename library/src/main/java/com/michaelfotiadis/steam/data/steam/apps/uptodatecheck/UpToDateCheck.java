@@ -1,11 +1,10 @@
 package com.michaelfotiadis.steam.data.steam.apps.uptodatecheck;
 
 import com.google.gson.annotations.SerializedName;
+import com.michaelfotiadis.steam.data.player.SteamApiModel;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
-public class UpToDateCheck {
+public class UpToDateCheck implements SteamApiModel {
 
     @SerializedName("success")
     private final Boolean success;
@@ -41,7 +40,7 @@ public class UpToDateCheck {
     /**
      * @return Boolean indicating if request was successful.
      */
-    @Nonnull
+
     public Boolean getSuccess() {
         return success;
     }
@@ -49,7 +48,7 @@ public class UpToDateCheck {
     /**
      * @return Boolean indicating if the given version number is the most current version.
      */
-    @Nonnull
+
     public Boolean getUpToDate() {
         return upToDate;
     }
@@ -57,7 +56,7 @@ public class UpToDateCheck {
     /**
      * @return Boolean indicating if the given version can be listed in public changelogs.
      */
-    @Nonnull
+
     public Boolean getVersionIsListable() {
         return versionIsListable;
     }
@@ -65,7 +64,7 @@ public class UpToDateCheck {
     /**
      * @return Integer of the most current version of the app available.
      */
-    @Nullable
+
     public Integer getRequiredVersion() {
         return requiredVersion;
     }
@@ -73,7 +72,7 @@ public class UpToDateCheck {
     /**
      * @return A string giving the status message if applicable.
      */
-    @Nullable
+
     public String getMessage() {
         return message;
     }

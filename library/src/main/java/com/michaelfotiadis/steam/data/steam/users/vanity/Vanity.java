@@ -4,8 +4,6 @@ package com.michaelfotiadis.steam.data.steam.users.vanity;
 import com.google.gson.annotations.SerializedName;
 import com.michaelfotiadis.steam.data.player.SteamApiModel;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 public class Vanity implements SteamApiModel {
 
@@ -25,7 +23,7 @@ public class Vanity implements SteamApiModel {
     /**
      * @return
      */
-    @Nullable
+
     public String getSteamId() {
         return steamId;
     }
@@ -33,7 +31,7 @@ public class Vanity implements SteamApiModel {
     /**
      * @return The status of the request. 1 if successful, 42 if there was no match.
      */
-    @Nonnull
+
     public Integer getSuccess() {
         return success;
     }
@@ -41,7 +39,7 @@ public class Vanity implements SteamApiModel {
     /**
      * @return
      */
-    @Nullable
+
     public String getMessage() {
         return message;
     }

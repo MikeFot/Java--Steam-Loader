@@ -2,8 +2,9 @@ package com.michaelfotiadis.steam.provider.dota;
 
 import com.michaelfotiadis.steam.api.dota2.Dota2EconApi;
 import com.michaelfotiadis.steam.data.FileFormat;
-import com.michaelfotiadis.steam.data.dota2.model.hero.HeroesResponse;
-import com.michaelfotiadis.steam.data.dota2.model.item.ItemsResponse;
+import com.michaelfotiadis.steam.data.ResultContainer;
+import com.michaelfotiadis.steam.data.dota2.model.hero.Heroes;
+import com.michaelfotiadis.steam.data.dota2.model.item.GameItems;
 import com.michaelfotiadis.steam.data.dota2.model.rarity.Rarities;
 import com.michaelfotiadis.steam.data.games.ValveGameIds;
 import com.michaelfotiadis.steam.provider.SteamCallback;
@@ -31,9 +32,9 @@ public class Dota2EconApiProvider extends Dota2ApiProvider<Dota2EconApi> {
      */
     public void getHeroes(final String language,
                           final boolean isItemizedOnly,
-                          final SteamCallback<HeroesResponse> masterCallback) {
+                          final SteamCallback<ResultContainer<Heroes>> masterCallback) {
 
-        final Call<HeroesResponse> call = getApi().getHeroes(
+        final Call<ResultContainer<Heroes>> call = getApi().getHeroes(
                 endpointId,
                 getKey(),
                 language,
@@ -51,9 +52,9 @@ public class Dota2EconApiProvider extends Dota2ApiProvider<Dota2EconApi> {
      * @param masterCallback {@link SteamCallback} for delivering the result
      */
     public void getItems(final String language,
-                         final SteamCallback<ItemsResponse> masterCallback) {
+                         final SteamCallback<ResultContainer<GameItems>> masterCallback) {
 
-        final Call<ItemsResponse> call = getApi().getItems(
+        final Call<ResultContainer<GameItems>> call = getApi().getItems(
                 endpointId,
                 getKey(),
                 language,
@@ -70,9 +71,9 @@ public class Dota2EconApiProvider extends Dota2ApiProvider<Dota2EconApi> {
      * @param masterCallback {@link SteamCallback} for delivering the result
      */
     public void getRarities(final String language,
-                            final SteamCallback<Rarities> masterCallback) {
+                            final SteamCallback<ResultContainer<Rarities>> masterCallback) {
 
-        final Call<Rarities> call = getApi().getRarities(
+        final Call<ResultContainer<Rarities>> call = getApi().getRarities(
                 endpointId,
                 getKey(),
                 language,

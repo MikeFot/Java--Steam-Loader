@@ -3,7 +3,7 @@ package com.michaelfotiadis.steam.provider.dota;
 import com.michaelfotiadis.steam.api.dota2.Dota2MatchApi;
 import com.michaelfotiadis.steam.data.FileFormat;
 import com.michaelfotiadis.steam.data.ResultContainer;
-import com.michaelfotiadis.steam.data.dota2.model.match.details.MatchDetailsResponse;
+import com.michaelfotiadis.steam.data.dota2.model.match.details.MatchDetails;
 import com.michaelfotiadis.steam.data.dota2.model.match.history.MatchHistory;
 import com.michaelfotiadis.steam.data.dota2.types.GameMode;
 import com.michaelfotiadis.steam.data.dota2.types.SkillBracket;
@@ -30,9 +30,9 @@ public class Dota2MatchApiProvider extends Dota2ApiProvider<Dota2MatchApi> {
      * @param masterCallback {@link SteamCallback} for delivering the result
      */
     public void getMatchDetails(final String matchId,
-                                final SteamCallback<MatchDetailsResponse> masterCallback) {
+                                final SteamCallback<ResultContainer<MatchDetails>> masterCallback) {
 
-        final Call<MatchDetailsResponse> call = getApi().getMatchById(
+        final Call<ResultContainer<MatchDetails>> call = getApi().getMatchById(
                 endpointId,
                 getKey(),
                 matchId,

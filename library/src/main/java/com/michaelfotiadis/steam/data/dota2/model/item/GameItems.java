@@ -8,15 +8,15 @@ import java.util.List;
 /**
  * See: https://wiki.teamfortress.com/wiki/WebAPI/GetGameItems
  */
-public class ItemsResponse implements DotaApiModel {
+public class GameItems implements DotaApiModel {
 
     @SerializedName("items")
-    private final List<Item> items;
+    private final List<GameItem> items;
     @SerializedName("status")
     private final Integer status;
 
 
-    public ItemsResponse(final List<Item> items, final int status) {
+    public GameItems(final List<GameItem> items, final int status) {
         this.items = items;
         this.status = status;
     }
@@ -24,7 +24,7 @@ public class ItemsResponse implements DotaApiModel {
     /**
      * @return List of items.
      */
-    public List<Item> getItems() {
+    public List<GameItem> getItems() {
         return items;
     }
 

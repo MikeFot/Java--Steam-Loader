@@ -5,9 +5,6 @@ import com.michaelfotiadis.steam.data.steam.apps.apps.SteamAppsResponse;
 import com.michaelfotiadis.steam.data.steam.apps.server.ServersContainer;
 import com.michaelfotiadis.steam.data.steam.apps.uptodatecheck.UpToDateCheck;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -24,7 +21,7 @@ public interface AppsApi {
      * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetAppList">Wiki</a>
      */
     @GET(BASE_URL + "GetAppList/v2/")
-    Call<SteamAppsResponse> getSteamApps(@Nullable @Query("format") String format);
+    Call<SteamAppsResponse> getSteamApps(@Query("format") String format);
 
     /**
      * WebAPI/GetServersAtAddress
@@ -35,8 +32,8 @@ public interface AppsApi {
      * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetServersAtAddress">Wiki</a>
      */
     @GET(BASE_URL + "GetServersAtAddress/v1/")
-    Call<ResponseContainer<ServersContainer>> getServersAtAddress(@Nonnull @Query("addr") String ipV4,
-                                                                  @Nullable @Query("format") String format);
+    Call<ResponseContainer<ServersContainer>> getServersAtAddress(@Query("addr") String ipV4,
+                                                                  @Query("format") String format);
 
     /**
      * WebAPI/UpToDateCheck
@@ -48,8 +45,8 @@ public interface AppsApi {
      * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/UpToDateCheck">Wiki</a>
      */
     @GET(BASE_URL + "UpToDateCheck/v1")
-    Call<ResponseContainer<UpToDateCheck>> getIsAppUpToDate(@Nonnull @Query("appid") String appId,
-                                                            @Nonnull @Query("version") String installedVersion,
-                                                            @Nullable @Query("format") String format);
+    Call<ResponseContainer<UpToDateCheck>> getIsAppUpToDate(@Query("appid") String appId,
+                                                            @Query("version") String installedVersion,
+                                                            @Query("format") String format);
 
 }

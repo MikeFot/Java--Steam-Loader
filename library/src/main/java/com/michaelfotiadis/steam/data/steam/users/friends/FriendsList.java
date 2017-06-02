@@ -1,14 +1,14 @@
 package com.michaelfotiadis.steam.data.steam.users.friends;
 
 import com.google.gson.annotations.SerializedName;
+import com.michaelfotiadis.steam.data.player.SteamApiModel;
 
-import javax.annotation.Nonnull;
 import java.util.List;
 
 /**
  * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetFriendList">Wiki</a>
  */
-public class FriendsList {
+public class FriendsList implements SteamApiModel {
 
     @SerializedName("friends")
     private final List<Friend> friends;
@@ -20,7 +20,7 @@ public class FriendsList {
     /**
      * @return A list of objects for each list entry.
      */
-    @Nonnull
+
     public List<Friend> getFriends() {
         return friends;
     }

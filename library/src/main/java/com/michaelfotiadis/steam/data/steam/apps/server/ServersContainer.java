@@ -1,15 +1,16 @@
 package com.michaelfotiadis.steam.data.steam.apps.server;
 
 import com.google.gson.annotations.SerializedName;
+import com.michaelfotiadis.steam.data.player.SteamApiModel;
 
 import java.util.List;
 
-import javax.annotation.Nonnull;
+
 
 /**
  * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetServersAtAddress">Wiki</a>
  */
-public class ServersContainer {
+public class ServersContainer implements SteamApiModel {
 
     @SerializedName("success")
     private final Boolean success;
@@ -24,7 +25,7 @@ public class ServersContainer {
     /**
      * @return Returns true if ip address is valid, does not mean server is functioning properly.
      */
-    @Nonnull
+
     public Boolean getSuccess() {
         return success;
     }
@@ -32,7 +33,7 @@ public class ServersContainer {
     /**
      * @return A list of every server from this ip address.
      */
-    @Nonnull
+
     public List<Server> getServers() {
         return servers;
     }

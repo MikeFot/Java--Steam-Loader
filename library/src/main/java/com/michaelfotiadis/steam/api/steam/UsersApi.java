@@ -5,9 +5,6 @@ import com.michaelfotiadis.steam.data.steam.users.friends.FriendsListResponse;
 import com.michaelfotiadis.steam.data.steam.users.player.PlayerSummaries;
 import com.michaelfotiadis.steam.data.steam.users.vanity.Vanity;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -27,9 +24,9 @@ public interface UsersApi {
      * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetPlayerSummaries">Wiki</a>
      */
     @GET(BASE_URL + "GetPlayerSummaries/v0002/")
-    Call<ResponseContainer<PlayerSummaries>> getPlayerSummaries(@Nonnull @Query("key") String key,
-                                                                @Nonnull @Query("steamids") String steamIds64,
-                                                                @Nullable @Query("format") String format);
+    Call<ResponseContainer<PlayerSummaries>> getPlayerSummaries(@Query("key") String key,
+                                                                @Query("steamids") String steamIds64,
+                                                                @Query("format") String format);
 
     /**
      * WebAPI/ResolveVanityURL
@@ -41,9 +38,9 @@ public interface UsersApi {
      * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/ResolveVanityURL">Wiki</a>
      */
     @GET(BASE_URL + "ResolveVanityURL/v0001/")
-    Call<ResponseContainer<Vanity>> getResolveVanityUrl(@Nonnull @Query("key") String key,
-                                                        @Nonnull @Query("vanityurl") String vanityUrl,
-                                                        @Nullable @Query("format") String format);
+    Call<ResponseContainer<Vanity>> getResolveVanityUrl(@Query("key") String key,
+                                                        @Query("vanityurl") String vanityUrl,
+                                                        @Query("format") String format);
 
     /**
      * WebAPI/GetFriendList
@@ -56,10 +53,10 @@ public interface UsersApi {
      * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetFriendList">Wiki</a>
      */
     @GET(BASE_URL + "GetFriendList/v1")
-    Call<FriendsListResponse> getFriendsList(@Nonnull @Query("key") String key,
-                                             @Nonnull @Query("steamid") String steamId,
-                                             @Nullable @Query("relationship") String relationship,
-                                             @Nullable @Query("format") String format);
+    Call<FriendsListResponse> getFriendsList(@Query("key") String key,
+                                             @Query("steamid") String steamId,
+                                             @Query("relationship") String relationship,
+                                             @Query("format") String format);
 
 
 }

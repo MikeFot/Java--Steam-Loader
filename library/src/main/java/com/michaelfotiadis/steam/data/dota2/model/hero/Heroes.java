@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * See: https://wiki.teamfortress.com/wiki/WebAPI/GetHeroes
  */
-public class HeroesResponse implements DotaApiModel {
+public class Heroes implements DotaApiModel {
 
     @SerializedName("heroes")
     private final List<Hero> heroes;
@@ -19,7 +19,7 @@ public class HeroesResponse implements DotaApiModel {
     private final Integer count;
 
 
-    public HeroesResponse(final List<Hero> heroes, final Integer status, final Integer count) {
+    public Heroes(final List<Hero> heroes, final Integer status, final Integer count) {
         this.heroes = heroes;
         this.status = status;
         this.count = count;

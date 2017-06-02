@@ -1,7 +1,7 @@
 package com.michaelfotiadis.steam.api.dota2;
 
 import com.michaelfotiadis.steam.data.ResultContainer;
-import com.michaelfotiadis.steam.data.dota2.model.match.details.MatchDetailsResponse;
+import com.michaelfotiadis.steam.data.dota2.model.match.details.MatchDetails;
 import com.michaelfotiadis.steam.data.dota2.model.match.history.MatchHistory;
 
 import retrofit2.Call;
@@ -12,10 +12,10 @@ import retrofit2.http.Query;
 public interface Dota2MatchApi {
 
     @GET("IDOTA2Match_{endpoint_id}/GetMatchDetails/V1/")
-    Call<MatchDetailsResponse> getMatchById(@Path("endpoint_id") String endpoint_id,
-                                            @Query("key") String key,
-                                            @Query("match_id") String match_id,
-                                            @Query("format") String format);
+    Call<ResultContainer<MatchDetails>> getMatchById(@Path("endpoint_id") String endpoint_id,
+                                                     @Query("key") String key,
+                                                     @Query("match_id") String match_id,
+                                                     @Query("format") String format);
 
     @GET("IDOTA2Match_{endpoint_id}/GetMatchHistory/V1/")
     Call<ResultContainer<MatchHistory>> getMatchHistory(@Path("endpoint_id") String endpoint_id,

@@ -4,8 +4,6 @@ package com.michaelfotiadis.steam.data.steam.users.player;
 import com.google.gson.annotations.SerializedName;
 import com.michaelfotiadis.steam.data.player.SteamApiModel;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 /**
  * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetPlayerSummaries">Wiki</a>
@@ -86,7 +84,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return The user's 64 bit ID
      */
-    @Nonnull
+
     public String getSteamId() {
         return SteamId;
     }
@@ -95,7 +93,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return A 32x32 image
      */
-    @Nonnull
+
     public String getAvatar() {
         return this.avatar;
     }
@@ -113,12 +111,12 @@ public class PlayerSummary implements SteamApiModel {
      * 5
      * Public
      */
-    @Nonnull
+
     public Integer getCommunityVisibilityState() {
         return this.communityVisibilityState;
     }
 
-    @Nonnull
+
     public CommunityVisibilityState getCommunityVisibilityStateAsEnum() {
         return CommunityVisibilityState.fromValue(this.communityVisibilityState);
     }
@@ -126,7 +124,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return If set to 1 the user has configured the profile.
      */
-    @Nonnull
+
     public Integer getProfileState() {
         return profileState;
     }
@@ -134,7 +132,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return User's display name.
      */
-    @Nonnull
+
     public String getPersonaName() {
         return personaName;
     }
@@ -142,7 +140,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return A unix timestamp of when the user was last online.
      */
-    @Nonnull
+
     public Long getLastLogOff() {
         return lastLogOff;
     }
@@ -150,7 +148,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return The URL to the user's Steam Community profile.
      */
-    @Nonnull
+
     public String getProfileUrl() {
         return profileUrl;
     }
@@ -158,7 +156,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return A 64x64 image
      */
-    @Nonnull
+
     public String getAvatarMedium() {
         return this.avatarMedium;
     }
@@ -166,7 +164,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return A 184x184 image
      */
-    @Nonnull
+
     public String getAvatarFull() {
         return this.avatarFull;
     }
@@ -188,12 +186,12 @@ public class PlayerSummary implements SteamApiModel {
      * 6
      * Looking to play
      */
-    @Nonnull
+
     public Integer getPersonaState() {
         return personaState;
     }
 
-    @Nonnull
+
     public PersonaState getPersonaStateAsEnum() {
         return PersonaState.fromValue(this.personaState);
     }
@@ -201,7 +199,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return The 64 bit ID of the user's primary group.
      */
-    @Nullable
+
     public String getPrimaryClanId() {
         return primaryClanId;
     }
@@ -209,7 +207,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return A unix timestamp of the date the profile was created.
      */
-    @Nullable
+
     public Long getTimeCreated() {
         return timeCreated;
     }
@@ -221,7 +219,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return ISO 3166 code of where the user is located.
      */
-    @Nullable
+
     public String getLocCountryCode() {
         return locCountryCode;
     }
@@ -229,7 +227,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return Variable length code representing the state the user is located in.
      */
-    @Nullable
+
     public String getLocStateCode() {
         return locStateCode;
     }
@@ -237,7 +235,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return If present the profile allows public comments.
      */
-    @Nullable
+
     public String getCommentPermission() {
         return commentPermission;
     }
@@ -245,7 +243,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return The user's real name.
      */
-    @Nullable
+
     public String getRealName() {
         return realName;
     }
@@ -253,7 +251,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return An integer ID internal to Steam representing the user's city.
      */
-    @Nullable
+
     public String getLocCityId() {
         return locCityId;
     }
@@ -261,7 +259,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return If the user is in game this will be set to it's app ID as a string.
      */
-    @Nullable
+
     public String getGameId() {
         return gameId;
     }
@@ -269,7 +267,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return The title of the game.
      */
-    @Nullable
+
     public String getGameExtraInfo() {
         return gameExtraInfo;
     }
@@ -277,7 +275,7 @@ public class PlayerSummary implements SteamApiModel {
     /**
      * @return The server URL given as an IP address and port number separated by a colon, this will not be present or set to "0.0.0.0:0" if none is available.
      */
-    @Nullable
+
     public String getGameServerIp() {
         return gameServerIp;
     }

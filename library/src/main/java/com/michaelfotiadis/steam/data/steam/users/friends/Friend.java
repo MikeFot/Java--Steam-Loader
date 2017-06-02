@@ -1,13 +1,14 @@
 package com.michaelfotiadis.steam.data.steam.users.friends;
 
 import com.google.gson.annotations.SerializedName;
+import com.michaelfotiadis.steam.data.player.SteamApiModel;
 
-import javax.annotation.Nonnull;
+
 
 /**
  * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetFriendList">Wiki</a>
  */
-public class Friend {
+public class Friend implements SteamApiModel {
 
     @SerializedName("steamid")
     private final String steamId;
@@ -26,7 +27,7 @@ public class Friend {
     /**
      * @return The 64 bit ID of the friend.
      */
-    @Nonnull
+
     public String getSteamId() {
         return steamId;
     }
@@ -34,7 +35,7 @@ public class Friend {
     /**
      * @return Role in relation to the given steamid
      */
-    @Nonnull
+
     public String getRelationship() {
         return relationship;
     }
@@ -42,7 +43,7 @@ public class Friend {
     /**
      * @return A unix timestamp of when the friend was added to the list.
      */
-    @Nonnull
+
     public Long getFriendSince() {
         return friendSince;
     }

@@ -6,8 +6,8 @@ sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
 
 final int versionMajor = 1
-final int versionMinor = 0
-final int versionPatch = 4
+final int versionMinor = 1
+final int versionPatch = 0
 
 // Lib Versions
 final String retrofit2Version = "2.2.0"
@@ -28,8 +28,6 @@ dependencies {
     compile "com.squareup.okhttp3:okhttp:${okhttp3Version}"
     compile "com.squareup.okhttp3:logging-interceptor:${okhttp3Version}"
 
-    // https://mvnrepository.com/artifact/com.google.code.findbugs/jsr305
-    compileOnly "com.google.code.findbugs:jsr305:3.0.2"
     testCompile 'junit:junit:4.12'
 }
 

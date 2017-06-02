@@ -2,9 +2,6 @@ package com.michaelfotiadis.steam.api.steam;
 
 import com.michaelfotiadis.steam.data.steam.news.NewsResponse;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -26,11 +23,11 @@ public interface NewsApi {
      * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetNewsForApp">Wiki</a>
      */
     @GET(BASE_URL + "GetNewsForApp/v0002")
-    Call<NewsResponse> getNewsForApp(@Nonnull @Query("appid") String appId,
-                                     @Nullable @Query("maxlength") String maxLength,
-                                     @Nullable @Query("enddate") String endDate,
-                                     @Nullable @Query("count") String count,
-                                     @Nullable @Query("feeds") String feeds,
-                                     @Nullable @Query("format") String format);
+    Call<NewsResponse> getNewsForApp(@Query("appid") String appId,
+                                     @Query("maxlength") String maxLength,
+                                     @Query("enddate") String endDate,
+                                     @Query("count") String count,
+                                     @Query("feeds") String feeds,
+                                     @Query("format") String format);
 
 }

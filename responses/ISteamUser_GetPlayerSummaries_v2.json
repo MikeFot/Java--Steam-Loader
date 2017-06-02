@@ -1,0 +1,23 @@
+{
+  "response": {
+    "players": [
+      {
+        "steamid": "76561198005727241",
+        "communityvisibilitystate": 3,
+        "profilestate": 1,
+        "personaname": "Necromutilator",
+        "lastlogoff": 1496184495,
+        "profileurl": "http://steamcommunity.com/id/mfirehell/",
+        "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/e5/e59ff95d144e8f2e6ac89a15d28dc5f8566fd638.jpg",
+        "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/e5/e59ff95d144e8f2e6ac89a15d28dc5f8566fd638_medium.jpg",
+        "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/e5/e59ff95d144e8f2e6ac89a15d28dc5f8566fd638_full.jpg",
+        "personastate": 0,
+        "primaryclanid": "103582791434672565",
+        "timecreated": 1233355852,
+        "personastateflags": 0,
+        "loccountrycode": "GB",
+        "locstatecode": "03"
+      }
+    ]
+  }
+}

@@ -1,7 +1,8 @@
 package com.michaelfotiadis.steam.api.dota2;
 
-import com.michaelfotiadis.steam.data.dota2.model.hero.HeroesResponse;
-import com.michaelfotiadis.steam.data.dota2.model.item.ItemsResponse;
+import com.michaelfotiadis.steam.data.ResultContainer;
+import com.michaelfotiadis.steam.data.dota2.model.hero.Heroes;
+import com.michaelfotiadis.steam.data.dota2.model.item.GameItems;
 import com.michaelfotiadis.steam.data.dota2.model.rarity.Rarities;
 
 import retrofit2.Call;
@@ -24,12 +25,12 @@ public interface Dota2EconApi {
      * @return A list of current Dota2 Heroes
      * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetHeroes">Wiki</a>
      */
-    @GET(BASE_URL + "_{endpoint_id}/GetHeroes/v1")
-    Call<HeroesResponse> getHeroes(@Path("endpoint_id") String endpoint_id,
-                                   @Query("key") String key,
-                                   @Query("language") String language,
-                                   @Query("itemizedonly") Boolean itemizedOnly,
-                                   @Query("format") String format);
+    @GET(BASE_URL + "{endpoint_id}/GetHeroes/v1")
+    Call<ResultContainer<Heroes>> getHeroes(@Path("endpoint_id") String endpoint_id,
+                                            @Query("key") String key,
+                                            @Query("language") String language,
+                                            @Query("itemizedonly") Boolean itemizedOnly,
+                                            @Query("format") String format);
 
     /**
      * WebAPI/GetGameItems
@@ -41,11 +42,11 @@ public interface Dota2EconApi {
      * @return A list of current Dota2 Items
      * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetGameItems">Wiki</a>
      */
-    @GET(BASE_URL + "_{endpoint_id}/GetGameItems/v1")
-    Call<ItemsResponse> getItems(@Path("endpoint_id") String endpoint_id,
-                                 @Query("key") String key,
-                                 @Query("language") String language,
-                                 @Query("format") String format);
+    @GET(BASE_URL + "{endpoint_id}/GetGameItems/v1")
+    Call<ResultContainer<GameItems>> getItems(@Path("endpoint_id") String endpoint_id,
+                                              @Query("key") String key,
+                                              @Query("language") String language,
+                                              @Query("format") String format);
 
     /**
      * WebAPI/GetRarities
@@ -57,10 +58,10 @@ public interface Dota2EconApi {
      * @return List of rarity objects
      * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetRarities">Wiki</a>
      */
-    @GET(BASE_URL + "_{endpoint_id}/GetRarities/v1")
-    Call<Rarities> getRarities(@Path("endpoint_id") String endpoint_id,
-                               @Query("key") String key,
-                               @Query("language") String language,
-                               @Query("format") String format);
+    @GET(BASE_URL + "{endpoint_id}/GetRarities/v1")
+    Call<ResultContainer<Rarities>> getRarities(@Path("endpoint_id") String endpoint_id,
+                                                @Query("key") String key,
+                                                @Query("language") String language,
+                                                @Query("format") String format);
 
 }

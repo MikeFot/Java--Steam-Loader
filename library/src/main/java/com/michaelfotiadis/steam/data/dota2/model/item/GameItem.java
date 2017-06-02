@@ -6,7 +6,7 @@ import com.michaelfotiadis.steam.data.dota2.model.DotaApiModel;
 /**
  * See: https://wiki.teamfortress.com/wiki/WebAPI/GetGameItems
  */
-public class Item implements DotaApiModel {
+public class GameItem implements DotaApiModel {
 
     @SerializedName("id")
     private final Integer id;
@@ -23,7 +23,7 @@ public class Item implements DotaApiModel {
     @SerializedName("localized_name")
     private final String localizedName;
 
-    public Item(final Integer id, final String name, final Integer cost, final Integer secretShop, final Integer sideShop, final Integer recipe, final String localizedName) {
+    public GameItem(final Integer id, final String name, final Integer cost, final Integer secretShop, final Integer sideShop, final Integer recipe, final String localizedName) {
         this.id = id;
         this.name = name;
         this.cost = cost;

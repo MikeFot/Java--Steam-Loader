@@ -1,11 +1,12 @@
 package com.michaelfotiadis.steam.data.steam.users.bans;
 
 import com.google.gson.annotations.SerializedName;
+import com.michaelfotiadis.steam.data.player.SteamApiModel;
 
 /**
  * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetPlayerBans">Wiki</a>
  */
-public class PlayerBan {
+public class PlayerBan implements SteamApiModel {
 
     @SerializedName("SteamId")
     private final String steamId;

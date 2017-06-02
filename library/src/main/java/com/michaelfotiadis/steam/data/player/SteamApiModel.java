@@ -1,5 +1,7 @@
 package com.michaelfotiadis.steam.data.player;
 
-public interface SteamApiModel {
+import java.io.Serializable;
+
+public interface SteamApiModel extends Serializable {
     // Marker Interface
 }

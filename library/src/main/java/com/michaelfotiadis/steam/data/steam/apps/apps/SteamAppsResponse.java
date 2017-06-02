@@ -1,13 +1,14 @@
 package com.michaelfotiadis.steam.data.steam.apps.apps;
 
 import com.google.gson.annotations.SerializedName;
+import com.michaelfotiadis.steam.data.player.SteamApiModel;
 
-import javax.annotation.Nonnull;
+
 
 /**
  * https://wiki.teamfortress.com/wiki/WebAPI/GetAppList
  */
-public class SteamAppsResponse {
+public class SteamAppsResponse implements SteamApiModel {
 
     @SerializedName("applist")
     private final Apps apps;
@@ -16,7 +17,7 @@ public class SteamAppsResponse {
         this.apps = apps;
     }
 
-    @Nonnull
+
     public Apps getApplist() {
         return apps;
     }

@@ -5,7 +5,6 @@ import com.michaelfotiadis.steam.data.player.SteamApiModel;
 
 import java.util.List;
 
-import javax.annotation.Nonnull;
 
 /**
  * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetPlayerSummaries">Wiki</a>
@@ -19,7 +18,7 @@ public class PlayerSummaries implements SteamApiModel {
         this.players = players;
     }
 
-    @Nonnull
+
     public List<PlayerSummary> getPlayers() {
         return this.players;
     }

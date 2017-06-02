@@ -1,14 +1,15 @@
 package com.michaelfotiadis.steam.data.steam.apps.apps;
 
 import com.google.gson.annotations.SerializedName;
+import com.michaelfotiadis.steam.data.player.SteamApiModel;
 
-import javax.annotation.Nonnull;
+
 
 /**
  * A list of objects containing the title and app ID of each program available in the store.
  * https://wiki.teamfortress.com/wiki/WebAPI/GetAppList
  */
-public class App {
+public class App implements SteamApiModel {
 
     @SerializedName("appid")
     private final Integer appId;
@@ -23,7 +24,7 @@ public class App {
     /**
      * @return An integer containing the program's ID.
      */
-    @Nonnull
+
     public Integer getId() {
         return appId;
     }
@@ -31,7 +32,7 @@ public class App {
     /**
      * @return A string containing the program's publicly facing title.
      */
-    @Nonnull
+
     public String getName() {
         return name;
     }
