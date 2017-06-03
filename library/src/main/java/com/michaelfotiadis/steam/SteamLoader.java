@@ -10,6 +10,7 @@ import com.michaelfotiadis.steam.net.OkHttpFactory;
 import com.michaelfotiadis.steam.provider.dota.Dota2EconApiProvider;
 import com.michaelfotiadis.steam.provider.dota.Dota2MatchApiProvider;
 import com.michaelfotiadis.steam.provider.games.GamesApiProvider;
+import com.michaelfotiadis.steam.provider.image.ImageProvider;
 import com.michaelfotiadis.steam.provider.player.PlayerApiProvider;
 
 public class SteamLoader {
@@ -21,6 +22,7 @@ public class SteamLoader {
     private Dota2EconApiProvider dota2EconomyApiProvider;
     private GamesApiProvider gamesProvider;
     private PlayerApiProvider playerProvider;
+    private ImageProvider imageProvider;
 
     public SteamLoader(final String key) {
         this(key, false);
@@ -87,6 +89,13 @@ public class SteamLoader {
             playerProvider = new PlayerApiProvider(key, networkLoader.getUsersApi());
         }
         return playerProvider;
+    }
+
+    public ImageProvider getImageProvider() {
+        if (imageProvider == null) {
+            imageProvider = new ImageProvider();
+        }
+        return imageProvider;
     }
 
 }

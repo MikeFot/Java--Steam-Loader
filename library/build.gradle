@@ -7,7 +7,7 @@ targetCompatibility = "1.7"
 
 final int versionMajor = 1
 final int versionMinor = 1
-final int versionPatch = 0
+final int versionPatch = 2
 
 // Lib Versions
 final String retrofit2Version = "2.2.0"

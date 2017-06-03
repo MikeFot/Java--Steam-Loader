@@ -14,6 +14,7 @@ public class ImageProvider extends AssetProvider {
 
     private static final String PREFIX_ITEM = "item_";
     private static final String PREFIX_HERO = "npc_dota_hero_";
+    private static final String PREFIX_RECIPE = "recipe";
 
 
     public String getItemImageEndpoint(final String itemName) {
@@ -22,7 +23,11 @@ public class ImageProvider extends AssetProvider {
             return "";
         }
 
-        final String searchName = itemName.startsWith(PREFIX_ITEM) ? itemName.replaceAll(PREFIX_ITEM, "") : itemName;
+        String searchName = itemName.startsWith(PREFIX_ITEM) ? itemName.replaceAll(PREFIX_ITEM, "") : itemName;
+
+        if (searchName.startsWith(PREFIX_RECIPE)) {
+            searchName = PREFIX_RECIPE;
+        }
 
         return String.format(Locale.US, ENDPOINT_ITEM, searchName.toLowerCase(Locale.US), Size.LARGE_HORIZONTAL.toString());
 
