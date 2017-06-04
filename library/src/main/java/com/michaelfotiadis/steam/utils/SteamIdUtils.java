@@ -8,6 +8,18 @@ public class SteamIdUtils {
         return (steamId - CONSTANT) > 0;
     }
 
+    public static boolean isSteamId64(final String steamId) {
+
+        final Long longId;
+        try {
+            longId = Long.parseLong(steamId);
+        } catch (final Exception e) {
+            return false;
+        }
+
+        return (longId - CONSTANT) > 0;
+    }
+
     public static long steamId3toSteam64(final long steamId3) {
         return CONSTANT + steamId3;
     }

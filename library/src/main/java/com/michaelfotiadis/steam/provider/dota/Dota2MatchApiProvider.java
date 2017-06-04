@@ -16,10 +16,10 @@ public class Dota2MatchApiProvider extends Dota2ApiProvider<Dota2MatchApi> {
 
     private final String endpointId;
 
-    public Dota2MatchApiProvider(final String key, final boolean isDebugEnabled, final Dota2MatchApi api) {
+    public Dota2MatchApiProvider(final String key, final boolean isUseTestServer, final Dota2MatchApi api) {
         super(key, api);
 
-        this.endpointId = isDebugEnabled ? ValveGameIds.DOTA_2_BETA.toString() : ValveGameIds.DOTA_2.toString();
+        this.endpointId = isUseTestServer ? ValveGameIds.DOTA_2_BETA.toString() : ValveGameIds.DOTA_2.toString();
 
     }
 
@@ -46,17 +46,26 @@ public class Dota2MatchApiProvider extends Dota2ApiProvider<Dota2MatchApi> {
      *
      * @param accountId       optional - 32-bit accountId
      * @param numberOfMatches optional - Amount of matches to include in results (default: 25).
+     * @param startAtMatchId  optional - Start at the given match ID
      * @param masterCallback  {@link SteamCallback} for delivering the result
      */
     public void getMatchHistory(final String accountId,
                                 final Integer numberOfMatches,
+                                final String startAtMatchId,
                                 final SteamCallback<ResultContainer<MatchHistory>> masterCallback) {
+
 
         final Call<ResultContainer<MatchHistory>> call = getApi().getMatchHistory(
                 endpointId,
                 getKey(),
-                accountId,
-                null, null, null, null, null, null, null,
+                sanitiseId3(accountId),
+                null,
+                null,
+                null,
+                null,
+                null,
+                startAtMatchId,
+                null,
                 numberOfMatches,
                 FileFormat.JSON.toString());
         execAsync(call, new WrappedCallback<>(masterCallback));
@@ -86,16 +95,17 @@ public class Dota2MatchApiProvider extends Dota2ApiProvider<Dota2MatchApi> {
                                 final Integer numberOfMatches,
                                 final SteamCallback<ResultContainer<MatchHistory>> masterCallback) {
 
+
         final Call<ResultContainer<MatchHistory>> call = getApi().getMatchHistory(
                 endpointId, getKey(),
-                accountId,
+                sanitiseId3(accountId),
                 heroId,
                 gameMode.getValue(),
                 skillBracket.getValue(),
                 minPlayers,
                 leagueId,
                 startAtMatchId,
-                tournamentGamesOnly,
+                conditionalToInteger(tournamentGamesOnly),
                 numberOfMatches,
                 FileFormat.JSON.toString());
         execAsync(call, new WrappedCallback<>(masterCallback));

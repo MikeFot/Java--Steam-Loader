@@ -19,14 +19,26 @@ public class AbilityUpgrade implements DotaApiModel {
         this.level = level;
     }
 
+    /**
+     * @return ID of the ability upgraded.
+     */
     public Integer getAbility() {
         return this.ability;
     }
 
+
+    /**
+     *
+     * @return Time since match start that the ability was upgraded.
+     */
     public Integer getTime() {
         return time;
     }
 
+    /**
+     *
+     * @return The level of the player at time of upgrading.
+     */
     public Integer getLevel() {
         return level;
     }

@@ -43,7 +43,7 @@ public enum GameMode {
         return value;
     }
 
-    public static GameMode getType(final int value) {
+    public static GameMode fromValue(final int value) {
         for (final GameMode mode : GameMode.values()) {
             if (mode.value == value) {
                 return mode;

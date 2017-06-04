@@ -16,10 +16,10 @@ public class Dota2EconApiProvider extends Dota2ApiProvider<Dota2EconApi> {
 
     private final String endpointId;
 
-    public Dota2EconApiProvider(final String key, final boolean isDebugEnabled, final Dota2EconApi api) {
+    public Dota2EconApiProvider(final String key, final boolean isUseTestServer, final Dota2EconApi api) {
         super(key, api);
 
-        this.endpointId = isDebugEnabled ? ValveGameIds.DOTA_2_BETA.toString() : ValveGameIds.DOTA_2.toString();
+        this.endpointId = isUseTestServer ? ValveGameIds.DOTA_2_BETA.toString() : ValveGameIds.DOTA_2.toString();
 
     }
 

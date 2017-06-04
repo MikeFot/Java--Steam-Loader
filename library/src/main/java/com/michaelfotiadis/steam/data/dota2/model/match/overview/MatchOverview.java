@@ -8,24 +8,33 @@ import com.michaelfotiadis.steam.data.dota2.types.LobbyType;
 
 import java.util.List;
 
+/**
+ * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetMatchHistory">Wiki</a>
+ */
 public class MatchOverview implements DotaApiModel {
 
     @SerializedName("match_id")
     private final Long matchId;
     @SerializedName("match_seq_num")
-    private final Integer matchSeqNum;
+    private final Long matchSeqNum;
     @SerializedName("start_time")
-    private final Integer startTime;
+    private final Long startTime;
     @SerializedName("lobby_type")
     private final Integer lobbyType;
     @SerializedName("radiant_team_id")
-    private final Integer radiantTeamId;
+    private final Long radiantTeamId;
     @SerializedName("dire_team_id")
-    private final Integer direTeamId;
+    private final Long direTeamId;
     @SerializedName("players")
     private final List<PlayerOverview> players;
 
-    public MatchOverview(final Long matchId, final Integer matchSeqNum, final Integer startTime, final Integer lobbyType, final Integer radiantTeamId, final Integer direTeamId, final List<PlayerOverview> players) {
+    public MatchOverview(final Long matchId,
+                         final Long matchSeqNum,
+                         final Long startTime,
+                         final Integer lobbyType,
+                         final Long radiantTeamId,
+                         final Long direTeamId,
+                         final List<PlayerOverview> players) {
         this.matchId = matchId;
         this.matchSeqNum = matchSeqNum;
         this.startTime = startTime;
@@ -43,18 +52,16 @@ public class MatchOverview implements DotaApiModel {
     }
 
     /**
-     *
      * @return A 'sequence number', representing the order in which matches were recorded.
      */
-    public Integer getMatchSeqNum() {
+    public Long getMatchSeqNum() {
         return matchSeqNum;
     }
 
     /**
-     *
      * @return Unix timestamp of when the match began.
      */
-    public Integer getStartTime() {
+    public Long getStartTime() {
         return startTime;
     }
 
@@ -66,16 +73,15 @@ public class MatchOverview implements DotaApiModel {
         return LobbyType.fromValue(lobbyType);
     }
 
-    public Integer getRadiantTeamId() {
+    public Long getRadiantTeamId() {
         return radiantTeamId;
     }
 
-    public Integer getDireTeamId() {
+    public Long getDireTeamId() {
         return this.direTeamId;
     }
 
     /**
-     *
      * @return The list of players within the match.
      */
     public List<PlayerOverview> getPlayers() {

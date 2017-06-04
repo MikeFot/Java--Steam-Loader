@@ -26,7 +26,7 @@ public enum LeaverStatus {
         this.description = description;
     }
 
-    public static LeaverStatus getType(final int value) {
+    public static LeaverStatus fromValue(final int value) {
         for (final LeaverStatus status : LeaverStatus.values()) {
             if (status.value == value) {
                 return status;

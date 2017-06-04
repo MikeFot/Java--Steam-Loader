@@ -6,6 +6,9 @@ import com.michaelfotiadis.steam.data.dota2.model.match.overview.MatchOverview;
 
 import java.util.List;
 
+/**
+ * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetMatchHistory">Wiki</a>
+ */
 public class MatchHistory implements DotaApiModel {
 
     @SerializedName("status")

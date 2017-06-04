@@ -17,7 +17,8 @@ public class SteamLoader {
 
     private final String key;
     private final NetworkLoader networkLoader;
-    private final boolean isDebugEnabled;
+    private final boolean isLoggingEnabled;
+    private final boolean isUseTestServer;
     private Dota2MatchApiProvider dota2MatchProvider;
     private Dota2EconApiProvider dota2EconomyApiProvider;
     private GamesApiProvider gamesProvider;
@@ -25,25 +26,27 @@ public class SteamLoader {
     private ImageProvider imageProvider;
 
     public SteamLoader(final String key) {
-        this(key, false);
+        this(key, false, false);
     }
 
-    private SteamLoader(final String key, final boolean isDebugEnabled, final NetworkLoader networkLoader) {
+    private SteamLoader(final String key, final boolean isLoggingEnabled, final boolean isUseTestServer, final NetworkLoader networkLoader) {
         this.key = key;
-        this.isDebugEnabled = isDebugEnabled;
+        this.isLoggingEnabled = isLoggingEnabled;
+        this.isUseTestServer = isUseTestServer;
         this.networkLoader = networkLoader;
 
     }
 
-    public SteamLoader(final String key, final boolean isDebugEnabled) {
-        this(key, isDebugEnabled, new NetworkLoader(isDebugEnabled));
+    public SteamLoader(final String key, final boolean isLoggingEnabled, final boolean isUseTestServer) {
+        this(key, isLoggingEnabled, isUseTestServer, new NetworkLoader(isLoggingEnabled));
     }
 
     public SteamLoader(final String key,
-                       final boolean isDebugEnabled,
+                       final boolean isLoggingEnabled,
+                       final boolean isUseTestServer,
                        final OkHttpFactory okHttpFactory,
                        final Gson gson) {
-        this(key, isDebugEnabled, new NetworkLoader(okHttpFactory, gson));
+        this(key, isLoggingEnabled, isUseTestServer, new NetworkLoader(okHttpFactory, gson));
     }
 
     public Dota2MatchApi getDota2MatchApi() {
@@ -65,14 +68,14 @@ public class SteamLoader {
 
     public Dota2MatchApiProvider getDota2MatchProvider() {
         if (dota2MatchProvider == null) {
-            dota2MatchProvider = new Dota2MatchApiProvider(key, isDebugEnabled, networkLoader.getDota2MatchApi());
+            dota2MatchProvider = new Dota2MatchApiProvider(key, isUseTestServer, networkLoader.getDota2MatchApi());
         }
         return dota2MatchProvider;
     }
 
     public Dota2EconApiProvider getDota2EconomyApiProvider() {
         if (dota2EconomyApiProvider == null) {
-            dota2EconomyApiProvider = new Dota2EconApiProvider(key, isDebugEnabled, networkLoader.getDota2EconApi());
+            dota2EconomyApiProvider = new Dota2EconApiProvider(key, isUseTestServer, networkLoader.getDota2EconApi());
         }
         return dota2EconomyApiProvider;
     }

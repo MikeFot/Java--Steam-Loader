@@ -9,6 +9,9 @@ public class ImageProvider extends AssetProvider {
     private static final String BASE_ENDPOINT = "http://cdn.dota2.com/apps/dota2/images/";
     private static final String STEAM_ENDPOINT = "http://media.steampowered.com/steamcommunity/public/images/apps/%s/%s.jpg";
 
+    private final static String STEAM_GAME_IMAGE_ENDPOINT_START = "http://media.steampowered.com/steamcommunity/public/images/apps/";
+    private final static String STEAM_GAME_IMAGE_ENDPOINT_END = ".jpg";
+
     private static final String ENDPOINT_ITEM = BASE_ENDPOINT + "items/%s_%s";
     private static final String ENDPOINT_HERO = BASE_ENDPOINT + "heroes/%s_%s";
 
@@ -61,5 +64,4 @@ public class ImageProvider extends AssetProvider {
 
 
     }
-
 }

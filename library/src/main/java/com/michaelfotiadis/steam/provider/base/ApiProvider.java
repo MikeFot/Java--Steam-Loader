@@ -41,6 +41,27 @@ public abstract class ApiProvider<D> {
         }
     }
 
+    protected static String sanitiseId3(final String id) {
+        final String id3;
+        //noinspection IfMayBeConditional
+        if (SteamIdUtils.isSteamId64(id)) {
+            id3 = String.valueOf(SteamIdUtils.steamId64toSteamId3(Long.parseLong(id)));
+        } else {
+            id3 = id;
+        }
+        return id3;
+    }
+
+    protected static Integer conditionalToInteger(final Boolean conditional) {
+        final Integer value;
+        if (conditional == null) {
+            value = null;
+        } else {
+            value = conditional ? 1 : 0;
+        }
+        return value;
+    }
+
     protected static class WrappedCallback<T> implements NetworkCallback<T> {
         private final SteamCallback<T> mCallback;
 
