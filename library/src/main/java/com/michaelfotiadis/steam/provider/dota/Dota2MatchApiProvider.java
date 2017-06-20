@@ -3,6 +3,8 @@ package com.michaelfotiadis.steam.provider.dota;
 import com.michaelfotiadis.steam.api.dota2.Dota2MatchApi;
 import com.michaelfotiadis.steam.data.FileFormat;
 import com.michaelfotiadis.steam.data.ResultContainer;
+import com.michaelfotiadis.steam.data.dota2.model.leagues.Leagues;
+import com.michaelfotiadis.steam.data.dota2.model.live.LiveGames;
 import com.michaelfotiadis.steam.data.dota2.model.match.details.MatchDetails;
 import com.michaelfotiadis.steam.data.dota2.model.match.history.MatchHistory;
 import com.michaelfotiadis.steam.data.dota2.types.GameMode;
@@ -130,6 +132,44 @@ public class Dota2MatchApiProvider extends Dota2ApiProvider<Dota2MatchApi> {
                 sequenceNumber,
                 numberOfMatches,
                 FileFormat.JSON.toString());
+        execAsync(call, new WrappedCallback<>(masterCallback));
+
+    }
+
+    /**
+     * Fetches a list of leagues supported in-game via DotaTV.
+     *
+     * @param language       optional - request localized names e.g. en_gb
+     * @param masterCallback {@link SteamCallback} for delivering the result
+     */
+    public void getLeagueListing(final String language,
+                                 final SteamCallback<ResultContainer<Leagues>> masterCallback) {
+
+        final Call<ResultContainer<Leagues>> call = getApi().getLeagueListing(
+                endpointId,
+                getKey(),
+                language,
+                FileFormat.JSON.toString()
+        );
+        execAsync(call, new WrappedCallback<>(masterCallback));
+
+    }
+
+    /**
+     * Fetches a list of games in-progress.
+     *
+     * @param language       optional - request localized names e.g. en_gb
+     * @param masterCallback {@link SteamCallback} for delivering the result
+     */
+    public void getLiveLeagueGames(final String language,
+                                   final SteamCallback<ResultContainer<LiveGames>> masterCallback) {
+
+        final Call<ResultContainer<LiveGames>> call = getApi().getLiveLeagueGames(
+                endpointId,
+                getKey(),
+                language,
+                FileFormat.JSON.toString()
+        );
         execAsync(call, new WrappedCallback<>(masterCallback));
 
     }

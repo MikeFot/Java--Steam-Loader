@@ -1,6 +1,8 @@
 package com.michaelfotiadis.steam.api.dota2;
 
 import com.michaelfotiadis.steam.data.ResultContainer;
+import com.michaelfotiadis.steam.data.dota2.model.leagues.Leagues;
+import com.michaelfotiadis.steam.data.dota2.model.live.LiveGames;
 import com.michaelfotiadis.steam.data.dota2.model.match.details.MatchDetails;
 import com.michaelfotiadis.steam.data.dota2.model.match.history.MatchHistory;
 
@@ -72,12 +74,59 @@ public interface Dota2MatchApi {
                                                         @Query("matches_requested") Integer matchesRequested,
                                                         @Query("format") String format);
 
+    /**
+     * WebAPI/GetMatchHistoryBySequenceNum
+     *
+     * @param endpoint_id    Dota2 Prod or Dev path ID (570 or 205790)
+     * @param key            Your Steam Web API key. Without this, the server will return an HTTP 403 (forbidden) error.
+     * @param startAtMatchId (Optional) (uint64)
+     *                       The match sequence number to start returning results from.
+     * @param matches        (Optional) (uint32)
+     *                       The amount of matches to return.
+     * @param format         (Optional) The file format to return output in.
+     * @return {@link MatchHistory} starting at sequence number
+     * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetMatchHistoryBySequenceNum">Wiki</a>
+     */
     @GET(BASE_URL + "{endpoint_id}/GetMatchHistoryBySequenceNum/V1/")
     Call<ResultContainer<MatchHistory>> getMatchHistoryBySequenceNumber(@Path("endpoint_id") String endpoint_id,
                                                                         @Query("key") String key,
-                                                                        @Query("start_at_match_seq_num") String id,
+                                                                        @Query("start_at_match_seq_num") String startAtMatchId,
                                                                         @Query("matches_requested") Integer matches,
                                                                         @Query("format") String format);
+
+
+    /**
+     * WebAPI/GetLeagueListing
+     *
+     * @param endpoint_id Dota2 Prod or Dev path ID (570 or 205790)
+     * @param key         Your Steam Web API key. Without this, the server will return an HTTP 403 (forbidden) error.
+     * @param language    (Optional) The language to provide hero names in.
+     * @param format      (Optional) The file format to return output in.
+     * @return {@link Leagues} A list of leagues supported in-game via DotaTV.
+     * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetLeagueListing">Wiki</a>
+     */
+    @GET(BASE_URL + "{endpoint_id}/GetLeagueListing/V1/")
+    Call<ResultContainer<Leagues>> getLeagueListing(@Path("endpoint_id") String endpoint_id,
+                                                    @Query("key") String key,
+                                                    @Query("language") String language,
+                                                    @Query("format") String format);
+
+
+    /**
+     * WebAPI/GetLiveLeagueGames
+     *
+     * @param endpoint_id Dota2 Prod or Dev path ID (570 or 205790)
+     * @param key         Your Steam Web API key. Without this, the server will return an HTTP 403 (forbidden) error.
+     * @param language    (Optional) The language to provide hero names in.
+     * @param format      (Optional) The file format to return output in.
+     * @return {@link Leagues} A list of games in-progress.
+     * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetLiveLeagueGames">Wiki</a>
+     */
+    @GET(BASE_URL + "{endpoint_id}/GetLiveLeagueGames/V1/")
+    Call<ResultContainer<LiveGames>> getLiveLeagueGames(@Path("endpoint_id") String endpoint_id,
+                                                        @Query("key") String key,
+                                                        @Query("language") String language,
+                                                        @Query("format") String format);
 
 
 }
