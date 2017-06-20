@@ -1,4 +1,4 @@
-package com.michaelfotiadis.steam.data.player.model.backpack;
+package com.michaelfotiadis.steam.data.steam.users.backpack;
 
 import com.google.gson.annotations.SerializedName;
 

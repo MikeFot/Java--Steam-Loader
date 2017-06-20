@@ -2,7 +2,7 @@ package com.michaelfotiadis.steam.api.steam;
 
 import com.michaelfotiadis.steam.data.ResponseContainer;
 import com.michaelfotiadis.steam.data.steam.users.friends.FriendsListResponse;
-import com.michaelfotiadis.steam.data.steam.users.player.PlayerSummaries;
+import com.michaelfotiadis.steam.data.steam.users.user.PlayerSummaries;
 import com.michaelfotiadis.steam.data.steam.users.vanity.Vanity;
 
 import retrofit2.Call;

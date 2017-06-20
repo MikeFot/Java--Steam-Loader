@@ -2,7 +2,7 @@ package com.michaelfotiadis.steam.data.steam.users.vanity;
 
 
 import com.google.gson.annotations.SerializedName;
-import com.michaelfotiadis.steam.data.player.SteamApiModel;
+import com.michaelfotiadis.steam.data.steam.SteamApiModel;
 
 
 public class Vanity implements SteamApiModel {

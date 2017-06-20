@@ -16,7 +16,7 @@ public final class SteamGson {
 
         final GsonBuilder gson = new GsonBuilder();
 
-        gson.setPrettyPrinting();
+        //gson.setPrettyPrinting();
         gson.serializeNulls();
         gson.excludeFieldsWithModifiers(Modifier.STATIC, Modifier.TRANSIENT, Modifier.VOLATILE);
 

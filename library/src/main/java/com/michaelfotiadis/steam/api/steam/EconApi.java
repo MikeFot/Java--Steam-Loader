@@ -1,6 +1,6 @@
-package com.michaelfotiadis.steam.api;
+package com.michaelfotiadis.steam.api.steam;
 
-import com.michaelfotiadis.steam.data.player.model.backpack.BackpackResponse;
+import com.michaelfotiadis.steam.data.steam.users.backpack.BackpackResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -10,7 +10,7 @@ import retrofit2.http.Query;
 /**
  * Retrofit interface
  */
-public interface PlayerApi {
+public interface EconApi {
 
 
     @GET("IEconItems_{endpoint_id}/GetPlayerItems/v0001/")

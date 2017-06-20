@@ -1,0 +1,23 @@
+{
+  "response": {
+    "total_count": 2,
+    "games": [
+      {
+        "appid": 57690,
+        "name": "Tropico 4",
+        "playtime_2weeks": 1717,
+        "playtime_forever": 26741,
+        "img_icon_url": "8e58ca48b978439ba4986938247fdb21a645a673",
+        "img_logo_url": "9123d91a47399baf116c2949dcebcd42b1962fbe"
+      },
+      {
+        "appid": 48700,
+        "name": "Mount & Blade: Warband",
+        "playtime_2weeks": 160,
+        "playtime_forever": 705,
+        "img_icon_url": "0773e90a6991a5427df4ee516687d832d92b050e",
+        "img_logo_url": "09b24ebdad4b8c24851ad1714e49e47a40ed25d2"
+      }
+    ]
+  }
+}

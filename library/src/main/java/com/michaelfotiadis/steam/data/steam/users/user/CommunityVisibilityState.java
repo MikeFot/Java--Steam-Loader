@@ -1,4 +1,4 @@
-package com.michaelfotiadis.steam.data.steam.users.player;
+package com.michaelfotiadis.steam.data.steam.users.user;
 
 /**
  * /**

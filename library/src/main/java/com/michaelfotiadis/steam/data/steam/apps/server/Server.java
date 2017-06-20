@@ -1,7 +1,7 @@
 package com.michaelfotiadis.steam.data.steam.apps.server;
 
 import com.google.gson.annotations.SerializedName;
-import com.michaelfotiadis.steam.data.player.SteamApiModel;
+import com.michaelfotiadis.steam.data.steam.SteamApiModel;
 
 /**
  * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetServersAtAddress">https://wiki.teamfortress.com/wiki/WebAPI/GetServersAtAddress</a>

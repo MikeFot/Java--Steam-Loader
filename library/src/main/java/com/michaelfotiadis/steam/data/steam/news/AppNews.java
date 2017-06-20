@@ -1,7 +1,7 @@
 package com.michaelfotiadis.steam.data.steam.news;
 
 import com.google.gson.annotations.SerializedName;
-import com.michaelfotiadis.steam.data.player.SteamApiModel;
+import com.michaelfotiadis.steam.data.steam.SteamApiModel;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package com.michaelfotiadis.steam.data.player.model;
+package com.michaelfotiadis.steam.data.steam.player.library;
 
 import com.google.gson.annotations.SerializedName;
-import com.michaelfotiadis.steam.data.player.SteamApiModel;
+import com.michaelfotiadis.steam.data.steam.SteamApiModel;
 
 import java.util.List;
 

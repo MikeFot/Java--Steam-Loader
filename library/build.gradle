@@ -5,8 +5,8 @@ apply plugin: 'com.jfrog.bintray'
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
 
-final int versionMajor = 1
-final int versionMinor = 2
+final int versionMajor = 2
+final int versionMinor = 0
 final int versionPatch = 0
 
 // Lib Versions

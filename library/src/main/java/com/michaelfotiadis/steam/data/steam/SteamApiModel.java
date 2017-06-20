@@ -1,4 +1,4 @@
-package com.michaelfotiadis.steam.data.player;
+package com.michaelfotiadis.steam.data.steam;
 
 import java.io.Serializable;
 

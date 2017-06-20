@@ -1,8 +1,8 @@
-package com.michaelfotiadis.steam.data.player.model;
+package com.michaelfotiadis.steam.data.steam.users.user;
 
 
-import com.michaelfotiadis.steam.data.player.SteamApiModel;
-import com.michaelfotiadis.steam.data.steam.users.player.PlayerSummary;
+import com.michaelfotiadis.steam.data.steam.SteamApiModel;
+import com.michaelfotiadis.steam.data.steam.player.library.Library;
 
 /**
  */

@@ -1,9 +1,9 @@
 package com.michaelfotiadis.steam.net;
 
 import com.google.gson.Gson;
-import com.michaelfotiadis.steam.api.GamesApi;
 import com.michaelfotiadis.steam.api.dota2.Dota2EconApi;
 import com.michaelfotiadis.steam.api.dota2.Dota2MatchApi;
+import com.michaelfotiadis.steam.api.steam.PlayerApi;
 import com.michaelfotiadis.steam.api.steam.UsersApi;
 
 import retrofit2.Retrofit;
@@ -24,16 +24,16 @@ public class RestClient {
         return createApi(Dota2MatchApi.class);
     }
 
-    public GamesApi getGamesApi() {
-        return createApi(GamesApi.class);
-    }
-
     public UsersApi getUsersApi() {
         return createApi(UsersApi.class);
     }
 
     public Dota2EconApi getDota2EconomyApi() {
         return createApi(Dota2EconApi.class);
+    }
+
+    public PlayerApi getPlayerApi() {
+        return createApi(PlayerApi.class);
     }
 
     private synchronized <T> T createApi(final Class<T> clazz) {

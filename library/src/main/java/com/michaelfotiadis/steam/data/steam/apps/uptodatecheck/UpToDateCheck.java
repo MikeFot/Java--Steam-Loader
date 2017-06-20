@@ -1,7 +1,7 @@
 package com.michaelfotiadis.steam.data.steam.apps.uptodatecheck;
 
 import com.google.gson.annotations.SerializedName;
-import com.michaelfotiadis.steam.data.player.SteamApiModel;
+import com.michaelfotiadis.steam.data.steam.SteamApiModel;
 
 
 public class UpToDateCheck implements SteamApiModel {

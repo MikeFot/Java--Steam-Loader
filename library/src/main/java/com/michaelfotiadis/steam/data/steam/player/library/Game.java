@@ -1,9 +1,12 @@
-package com.michaelfotiadis.steam.data.player.model;
+package com.michaelfotiadis.steam.data.steam.player.library;
 
 
 import com.google.gson.annotations.SerializedName;
-import com.michaelfotiadis.steam.data.player.SteamApiModel;
+import com.michaelfotiadis.steam.data.steam.SteamApiModel;
 
+/**
+ * @see <a href="https://wiki.teamfortress.com/wiki/WebAPI/GetOwnedGames">Wiki</a>
+ */
 public class Game implements SteamApiModel {
 
     @SerializedName("appid")
@@ -31,30 +34,57 @@ public class Game implements SteamApiModel {
         this.playtimeTwoWeeks = playtimeTwoWeeks;
     }
 
+    /**
+     * @return An integer containing the program's ID.
+     */
     public Long getAppId() {
         return this.appId;
     }
 
+    /**
+     * @return (Optional)
+     * A string containing the program's publicly facing title.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @return (Optional)
+     * An integer of the the player's total playtime, denoted in minutes.
+     */
     public Integer getPlaytimeForever() {
         return playtimeForever;
     }
 
+    /**
+     * @return (Optional)
+     * The program icon's file name, accessible at: http://media.steampowered.com/steamcommunity/public/images/apps/APPID/IMG_ICON_URL.jpg, replacing "APPID" and "IMG_ICON_URL" as necessary.
+     */
     public String getImgIconUrl() {
         return imgIconUrl;
     }
 
+    /**
+     * @return (Optional)
+     * The program logo's file name, accessible at: http://media.steampowered.com/steamcommunity/public/images/apps/APPID/IMG_LOGO_URL.jpg, replacing "APPID" and "IMG_LOGO_URL" as necessary.
+     */
     public String getImgLogoUrl() {
         return imgLogoUrl;
     }
 
+    /**
+     * @return (Optional)
+     * Whether the program has stats accessible via GetUserStatsForGame and GetGlobalStatsForGame.
+     */
     public Boolean getHasCommunityVisibleStats() {
         return hasCommunityVisibleStats;
     }
 
+    /**
+     * @return Optional)
+     * An integer of the player's playtime in the past 2 weeks, denoted in minutes.
+     */
     public Integer getPlaytimeTwoWeeks() {
         return playtimeTwoWeeks;
     }

@@ -18,27 +18,8 @@ public abstract class ApiProvider<D> {
         this.api = api;
     }
 
-    protected String getKey() {
-        return key;
-    }
-
-    protected D getApi() {
-        return api;
-    }
-
-    protected <T> void execAsync(final Call<T> call,
-                                 final NetworkCallback<T> callback) {
-
-        call.enqueue(Retrofit2CallbackFactory.create(callback));
-
-    }
-
     protected static String sanitiseId64(final String id) {
-        if (SteamIdUtils.isSteamId64(Long.parseLong(id))) {
-            return id;
-        } else {
-            return String.valueOf(SteamIdUtils.steamId3toSteam64(Long.parseLong(id)));
-        }
+        return SteamIdUtils.getId64FromString(id);
     }
 
     protected static String sanitiseId3(final String id) {
@@ -60,6 +41,21 @@ public abstract class ApiProvider<D> {
             value = conditional ? 1 : 0;
         }
         return value;
+    }
+
+    protected String getKey() {
+        return key;
+    }
+
+    protected D getApi() {
+        return api;
+    }
+
+    protected <T> void execAsync(final Call<T> call,
+                                 final NetworkCallback<T> callback) {
+
+        call.enqueue(Retrofit2CallbackFactory.create(callback));
+
     }
 
     protected static class WrappedCallback<T> implements NetworkCallback<T> {

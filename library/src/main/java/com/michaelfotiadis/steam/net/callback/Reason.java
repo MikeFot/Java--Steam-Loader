@@ -7,5 +7,6 @@ public enum Reason {
     NETWORK_ISSUE,
     TIMEOUT,
     HTTP_CODE_NOT_2XX,
+    INVALID_REQUEST_PARAMETERS,
     UNKNOWN
 }
