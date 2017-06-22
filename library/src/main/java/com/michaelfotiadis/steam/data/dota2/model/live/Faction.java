@@ -19,13 +19,13 @@ public class Faction implements DotaApiModel {
     @SerializedName("picks")
     private final List<LivePick> picks;
     @SerializedName("bans")
-    private final List<LiveBan> bans;
+    private final List<LivePick> bans;
     @SerializedName("players")
     private final List<LivePlayerDetails> players;
     @SerializedName("abilities")
     private final List<LiveAbility> abilities;
 
-    public Faction(final Integer score, final Integer towerState, final Integer barracksState, final List<LivePick> picks, final List<LiveBan> bans, final List<LivePlayerDetails> players, final List<LiveAbility> abilities) {
+    public Faction(final Integer score, final Integer towerState, final Integer barracksState, final List<LivePick> picks, final List<LivePick> bans, final List<LivePlayerDetails> players, final List<LiveAbility> abilities) {
         this.score = score;
         this.towerState = towerState;
         this.barracksState = barracksState;
@@ -51,7 +51,7 @@ public class Faction implements DotaApiModel {
         return picks;
     }
 
-    public List<LiveBan> getBans() {
+    public List<LivePick> getBans() {
         return bans;
     }
 
