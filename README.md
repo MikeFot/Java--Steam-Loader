@@ -22,7 +22,7 @@ allprojects {
 
 And the following to your module Gradle file:
 
-`compile 'com.michaelfotiadis:java-steam-loader:1.0.4'`
+`compile 'com.michaelfotiadis:java-steam-loader:2.0.0'`
 
 **Maven**
 
@@ -30,7 +30,7 @@ And the following to your module Gradle file:
 <dependency>
   <groupId>com.michaelfotiadis</groupId>
   <artifactId>java-steam-loader</artifactId>
-  <version>1.0.4</version>
+  <version>2.0.0</version>
   <type>pom</type>
 </dependency>
 ```
@@ -39,7 +39,19 @@ And the following to your module Gradle file:
 https://bintray.com/mikefot/maven/java-steam-loader
 
 ## Versions
-- 1.0.0 : Initial Release
+2.0.0 - Completed Player Service APIs and added all league calls
+1.2.0 - Updated Dota Match Details and added in some missing fields
+1.1.2
+1.1.1
+1.1.0
+1.0.8
+1.0.6
+1.0.5
+1.0.4
+1.0.3
+1.0.2
+1.0.1
+1.0.0 - Initial Release
 
 ## Target
 This library is targeting Java 7 for backwards compatibility with Android.
