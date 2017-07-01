@@ -1,4 +1,4 @@
-# Java--Steam-Loader
+# Steam Data Loader
 Java library for downloading data from Steam using the provided APIs.
 
 The project is currently in progress but feel free to use it. If you do, let me know so I can include a link to your app in the description for others to find!
