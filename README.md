@@ -1,7 +1,9 @@
 # Java--Steam-Loader
-Java library for downloading Dota2 Data from Steam
+Java library for downloading data from Steam using the provided APIs.
 
-The project is currently in progress but you are free to use it. It is updated regularly as I am documenting the APIs.
+The project is currently in progress but feel free to use it. If you do, let me know so I can include a link to your app in the description for others to find!
+
+It is updated regularly as I am documenting the APIs. Most of the models and classes have Javadocs, along with links to the wiki pages.
 
 ## Usage
 Instantiate a SteamLoader and use it to get Provider wrapper classes or the APIs directly. Happy coding!
