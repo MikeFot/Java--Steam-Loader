@@ -8,6 +8,14 @@ It is updated regularly as I am documenting the APIs. Most of the models and cla
 ## Usage
 Instantiate a SteamLoader and use it to get Provider wrapper classes or the APIs directly. Happy coding!
 
+## Sample
+See it in action here!
+
+https://github.com/MikeFot/Android--Dota2-Mobile-Stats
+
+## Attribution
+If you do use the library, please let me know. I would be happy to get some feedback!
+
 ## Importing into your project
 
 **Gradle**
