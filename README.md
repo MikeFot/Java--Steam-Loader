@@ -6,7 +6,7 @@ The project is currently in progress but feel free to use it. If you do, let me 
 It is updated regularly as I am documenting the APIs. Most of the models and classes have Javadocs, along with links to the wiki pages.
 
 ## Usage
-Instantiate a SteamLoader and use it to get Provider wrapper classes or the APIs directly. Happy coding!
+Instantiate a SteamLoader and use it to get Provider wrapper classes or the APIs directly. You will also need a Steam API key which you can get from the Steam Community website. Happy coding!
 
 ## Live Sample
 See it in action here!
